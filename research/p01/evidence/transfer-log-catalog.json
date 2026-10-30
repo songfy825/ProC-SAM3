@@ -1,0 +1,90 @@
+{
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_launch_help.log": {
+    "bytes": 548,
+    "sha256": "a7daee8cace0fe3ba64c51e4709180a1a4d43bed4a81ad524c9adcc458fd77bd"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_audit_help.log": {
+    "bytes": 225,
+    "sha256": "5ad57e5164baa58dc52c5110d5b7f46edf41bddd934db530b48f2a7079d7c79f"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_prepare_help.log": {
+    "bytes": 261,
+    "sha256": "ff69ae99569fc6dc8f2369a36de53ccae90fa5845223281df7daa6ccde6d6774"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_report_help.log": {
+    "bytes": 390,
+    "sha256": "bdbafdaf156b1affe7499f3edc1d923ad5b3b84737e3b6dd19774531f83e2195"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_evaluate_help.log": {
+    "bytes": 342,
+    "sha256": "ed40ca1d5891e4d1dba9628eb161587d85ce9460e0fb9970a9d1c02e405d7a8b"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_calibration_run_help.log": {
+    "bytes": 251,
+    "sha256": "33b0ce7384339f984e0a2f93a3f1ebd06e524842d21e46af5c42f0e9138d7fc9"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/original_model_unchanged.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/whitespace.log": {
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/frozen_contract.log": {
+    "bytes": 138,
+    "sha256": "5dd3e5c1ba8ca41ae805367e8b8cfb06d096a41099086c13c01f1507566c2581"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/negative_audits.log": {
+    "bytes": 1533,
+    "sha256": "41de335582ca8f91078f44bf68bfc3802c44f1d26fcdbc70054a8ea81fa7223b"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/contracts.log": {
+    "bytes": 7324,
+    "sha256": "800f089646c799abab968cad4771bdbfc663efb492157f8fd3b2b4b8d1d297b2"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/transfer-gt-red.log": {
+    "bytes": 2036,
+    "sha256": "9709a17ea4eb98407c92cc25a82d60600af4e71942ed1e30f903d57dd519320b"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/transfer-recovery-red.log": {
+    "bytes": 2695,
+    "sha256": "11f9728d833765c475c6013077d33f94213be0ac83c99435f8bed76806f5f803"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/transfer-red.log": {
+    "bytes": 4579,
+    "sha256": "08c1c370cb11cbabd2af80798ae93542df4c4c2f7e75baefbca77e5ce9b57d7b"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/transfer-review-green.log": {
+    "bytes": 1148,
+    "sha256": "ba07b6d7d1d13b50e164f4f24f646371dead0efdac391e8011e90d3ebfefdd3e"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/transfer-review-red.log": {
+    "bytes": 2326,
+    "sha256": "339b58d64d69960aad0ca39d0cfeba7be3455d5b3b8f3c70a66552ffc35ad2ba"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/transfer-split-red.log": {
+    "bytes": 1900,
+    "sha256": "13686880d0bf7afaac05bff51521181368c8872005b6730a1fde98ae77874873"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/transfer-stage1.log": {
+    "bytes": 3697,
+    "sha256": "81bb6262d3465c49686cd25dc799262afb311c3d37596f89e541a422a25853a5"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/transfer-stage2.log": {
+    "bytes": 896,
+    "sha256": "cb357dae36673926d9a185754d5b805dcbadc496788cc04ef33eed2d27f6f07a"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/transfer-stage3.log": {
+    "bytes": 1403,
+    "sha256": "b2989779d6eab088b6a46e4b16a89a8ef0e054e29bb30da881a803d275c39e61"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/transfer-stage4.log": {
+    "bytes": 1404,
+    "sha256": "de9a4afb590a9f14d050f4667bf97dc3d433bbbaa7b5130ba6c600d6aaff715a"
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/launch-pilot-dry-run-v1.json": {
+    "bytes": 2934,
+    "sha256": "7f663c6b60d92ba98e3b62a7695722aa890b2d0c99d1cba2948d4ea990c69755"
+  }
+}

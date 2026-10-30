@@ -1,0 +1,190 @@
+{
+  "scope": "CPU synthetic contracts only; GPU/real research PENDING",
+  "time_utc": "2026-10-30T10:04:58.291795+00:00",
+  "code_sha256": "ca1816ca8606689c2f4077851d89819758b38dead540c6be86807563659eb9a3",
+  "method_sha256": "3d1a8ef6a4b98917c8dfc9fe778179093958e773544457ab12514659396a44b0",
+  "config_sha256": "73f79700a36f20d6741a0550e2aeb637973ba9b50b71ac857c8f15a41743ce23",
+  "tests": 60,
+  "commands": [
+    {
+      "name": "contracts",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/research",
+        "-v"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 45.937419624009635,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/contracts.log",
+      "log_sha256": "800f089646c799abab968cad4771bdbfc663efb492157f8fd3b2b4b8d1d297b2"
+    },
+    {
+      "name": "negative_audits",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.audit",
+        "negative",
+        "--output",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/negative.json"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 24.973408701014705,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/negative_audits.log",
+      "log_sha256": "41de335582ca8f91078f44bf68bfc3802c44f1d26fcdbc70054a8ea81fa7223b"
+    },
+    {
+      "name": "frozen_contract",
+      "command": [
+        "sha256sum",
+        "-c",
+        "research/p01/evidence/contract-freeze.sha256"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 0.0024134090053848922,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/frozen_contract.log",
+      "log_sha256": "5dd3e5c1ba8ca41ae805367e8b8cfb06d096a41099086c13c01f1507566c2581"
+    },
+    {
+      "name": "whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 0.015774437983054668,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/whitespace.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "original_model_unchanged",
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "234c87e58fb08f02ba1cf163b2a73f5330d462e9",
+        "--",
+        "sam3_segmentor_cached.py",
+        "core",
+        "sam3",
+        "configs",
+        "prompt_pools"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 0.004065517045091838,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/original_model_unchanged.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "proc_research_calibration_run_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.calibration.run",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.4638774759951048,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_calibration_run_help.log",
+      "log_sha256": "33b0ce7384339f984e0a2f93a3f1ebd06e524842d21e46af5c42f0e9138d7fc9"
+    },
+    {
+      "name": "proc_research_evaluate_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.evaluate",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.8814729930018075,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_evaluate_help.log",
+      "log_sha256": "ed40ca1d5891e4d1dba9628eb161587d85ce9460e0fb9970a9d1c02e405d7a8b"
+    },
+    {
+      "name": "proc_research_report_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.report",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.741013932041824,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_report_help.log",
+      "log_sha256": "bdbafdaf156b1affe7499f3edc1d923ad5b3b84737e3b6dd19774531f83e2195"
+    },
+    {
+      "name": "proc_research_prepare_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.prepare",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.5082053020014428,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_prepare_help.log",
+      "log_sha256": "ff69ae99569fc6dc8f2369a36de53ccae90fa5845223281df7daa6ccde6d6774"
+    },
+    {
+      "name": "proc_research_audit_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.audit",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.462330912996549,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_audit_help.log",
+      "log_sha256": "5ad57e5164baa58dc52c5110d5b7f46edf41bddd934db530b48f2a7079d7c79f"
+    },
+    {
+      "name": "proc_research_launch_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.launch",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.84153595904354,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_launch_help.log",
+      "log_sha256": "a7daee8cace0fe3ba64c51e4709180a1a4d43bed4a81ad524c9adcc458fd77bd"
+    }
+  ],
+  "test_source_sha256": {
+    "tests/research/test_contracts.py": "f841b17fc501c16e509bbe37b0d2ea3fdf9c47bbbba8132962094248b9eab665",
+    "tests/research/test_pipeline.py": "b8860aba50ca8645628fcb43b91f36937054f42ed4798d098521e4d0d50bc2af",
+    "tests/research/test_review_fixes.py": "ceb35e40cfa69b1d2f208a93ce1b393c92f21cc9f31f53b39fa72912e5577ea6",
+    "tests/research/test_runtime.py": "4252c12864236096a1249247cdc04cbbe81903541341f07e66d295c78cf478f9",
+    "tests/research/test_stage_gates.py": "cbaab86863ccf4f45f2f3eb77834e0660fbaed9d9f7771f7988a6793da4fb3f1",
+    "tests/research/test_transfer.py": "a69bed40fe1fa663fc7f2b9a1d0956144be405246302cc8944f9790de7362b3a"
+  },
+  "status": "PASS"
+}

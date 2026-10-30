@@ -8,6 +8,7 @@ import numpy as np
 import torch
 from .cache import SampleCache,sha256
 from .geometry import align_scores,validate_encoder
+from .paths import checkpoint_path
 
 ROOT=Path(__file__).resolve().parents[1]
 FROZEN_POOLS={
@@ -55,7 +56,8 @@ def author_source(checkpoint,bpe):
     return source
 
 
-def load_author_class(checkpoint='/home/fengyi/sam3.pt'):
+def load_author_class(checkpoint=None):
+    checkpoint=checkpoint or checkpoint_path()
     module=types.ModuleType('p01_author_segmentor')
     source=author_source(checkpoint,ROOT/'sam3/assets/bpe_simple_vocab_16e6.txt.gz')
     exec(compile(source,str(ROOT/'sam3_segmentor_cached.py'),'exec'),module.__dict__)
@@ -63,8 +65,9 @@ def load_author_class(checkpoint='/home/fengyi/sam3.pt'):
 
 
 class ProCAdapter:
-    def __init__(self,dataset,provenance,allow_gpu=False,checkpoint='/home/fengyi/sam3.pt'):
+    def __init__(self,dataset,provenance,allow_gpu=False,checkpoint=None):
         require_gpu_authorization(allow_gpu)
+        checkpoint=checkpoint or checkpoint_path()
         options=model_options(dataset)  # pool existence before constructing anything
         if sha256(checkpoint)!=provenance['weight_sha256']:raise ValueError('weight hash mismatch')
         if sha256(options['expanded_prompt_pool_path'])!=provenance['pool_sha256']:raise ValueError('pool hash mismatch')

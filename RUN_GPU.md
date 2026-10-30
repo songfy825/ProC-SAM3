@@ -2,9 +2,11 @@
 
 Every GPU command below is **unverified on a real model**. This round did not load SAM3 weights into a model, run GPU inference/tests, reserve VRAM, queue work, or wait for GPU availability. Execute only after a new user instruction. GPU G0, actual 504 feature behavior, online resources, pilot and confirmation remain PENDING. CPU tests certify software contracts, not model accuracy.
 
+**Ubuntu / 4090 transfer:** start with [TRANSFER_4090.md](TRANSFER_4090.md). It supplies the portable requirements and stage launcher. The expanded commands below document each stage and its acceptance criteria; their original-host paths are examples, not target-machine defaults.
+
 ## Dependencies and independent scene evidence
 
-Work in `/home/fengyi/CodeHome/Proc/src/ProC-SAM3`, on `codex/p01-scale-calibration`. Use `bash scripts/p01/python.sh`, which invokes the read-only existing Python through the ELF loader and writes caches only under R/runtime/p01. Actual package versions are in `research/p01/environment-lock.txt`. Required imports: torch, torchvision, NumPy, Pillow, einops, iopath, timm, transformers and local SAM3/mmengine. No dependency installation or external environment repair occurred. CUDA driver must work when separately authorized; no automatic polling or queue is provided.
+Work on `codex/p01-scale-calibration`. `bash scripts/p01/python.sh` uses explicit `P01_PYTHON`, an active Conda environment, or a local `.p01-env`; the original host also supports its read-only interpreter through the ELF loader. Set `P01_RUNTIME` to the persistent experiment root. Actual source package versions are in `research/p01/environment-lock.txt`; installable pins are in `requirements.txt`. Required imports include torch, torchvision, NumPy, Pillow, einops, iopath, timm and the checkout's SAM3/mmengine. No dependency installation or external environment repair occurred. CUDA driver must work when separately authorized; no automatic polling or queue is provided.
 
 Assets: `/home/fengyi/sam3.pt` (SHA256 in evidence), local `sam3/assets/bpe_simple_vocab_16e6.txt.gz`, shipped LoveDA/iSAID `.pkl` pools. The adapter replaces only MMSeg base/registry wiring and two asset paths in memory; all original algorithm methods remain unchanged. No Qwen or prompt-generation entry is invoked. Missing or non-expanding published pool is an error.
 
@@ -15,6 +17,8 @@ All commands below assume:
 ```bash
 cd /home/fengyi/CodeHome/Proc/src/ProC-SAM3
 P01_R=/home/fengyi/CodeHome/Proc/runtime/p01
+export P01_RUNTIME="$P01_R"
+export P01_PYTHON=/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python
 mkdir -p "$P01_R/inputs" "$P01_R/runs"
 ```
 
@@ -119,7 +123,7 @@ bash scripts/p01/python.sh -m proc_research.report \
   --bank-run "$P01_R/runs/banks-v1" --output "$P01_R/runs/confirmation-report-v1"
 ```
 
-The exact sealed bank is required. Persistent per-image confirmation claims under R/runtime/p01/confirmation_claims prevent reuse by renaming seals, reordering manifests or changing run/config names. Only exact interrupted-run resume is allowed. Do not remove claims to retry tuning. A crash keeps evidence; investigate before resuming.
+The exact sealed bank is required. Persistent per-image confirmation claims under `$P01_RUNTIME/confirmation_claims` prevent reuse by renaming seals, reordering manifests or changing run/config names. Preserve the entire runtime and claims when moving machines; changing its root does not authorize fresh confirmation on exposed images. Only exact interrupted-run resume is allowed. Do not remove claims to retry tuning. A crash keeps evidence; investigate before resuming.
 
 Superiority requires each relevant paired CI lower bound >0; all classes are protected and any >1pp decline restricts the conclusion. Too few independent scenes, all-global fallback or wide intervals means insufficient evidence. Keep model online timing and VRAM/encode counts separate from CPU calibration and cache IO. Never report cached replay speed as online inference speed. The prompt-pool provenance gap remains a limitation even with positive confirmation.
 

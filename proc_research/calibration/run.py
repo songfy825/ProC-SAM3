@@ -13,6 +13,7 @@ from ..cache import (sha256,digest,write_json,write_sample,load_sample,
                      estimate_cache_bytes,ensure_capacity)
 from ..protocol import read_manifest,create_run,verify_run,select_splits
 from ..baseline import ROOT,model_options,require_gpu_authorization
+from ..paths import runtime_root
 from .signatures import (CalibrationConfig,fit_signatures,shuffle_conditions,
                          save_bank,load_bank)
 from .decode import raw_labels,rms_labels,faithful_ecd,decode_multiview
@@ -38,7 +39,8 @@ def load_config(path):
 
 def code_files():
     # Registration/commit state and evidence updates must not alter code identity.
-    paths={'sam3_segmentor_cached.py','scripts/p01/python.sh','research/p01/config.json'}
+    paths={'sam3_segmentor_cached.py','research/p01/config.json','requirements.txt'}
+    paths.update(str(p.relative_to(ROOT)) for p in (ROOT/'scripts/p01').glob('*') if p.suffix in ('.py','.sh'))
     for folder in ('proc_research','core','sam3','mmengine','configs','prompt_pools'):
         paths.update(str(p.relative_to(ROOT)) for p in (ROOT/folder).rglob('*')
                      if p.is_file() and p.suffix in ('.py','.txt','.gz','.pkl'))
@@ -94,7 +96,8 @@ def claim_confirmation(root,ident,run_id,seal_hash):
     """One claim per frozen image manifest, independent of seal/config filename.
 
     Changing parameters cannot make already-exposed confirmation images fresh.
-    The production registry location is fixed under R/runtime/p01.
+    The production registry is under the fixed experiment P01_RUNTIME root.
+    Preserve it when moving machines; changing the root cannot authorize reuse.
     """
     root=Path(root);root.mkdir(parents=True,exist_ok=True)
     record={'run_id':run_id,'seal_sha256':seal_hash,'config_sha256':ident['config_sha256']}
@@ -126,7 +129,7 @@ def check_stage(stage,ident,g0_run,freeze=None,run_id=None):
         for path,h in seal['receipts'].items():
             if sha256(path)!=h:raise ValueError('freeze receipt changed')
             _receipt(Path(path).parent)
-        claim_confirmation(ROOT.parents[1]/'runtime/p01/confirmation_claims',ident,run_id,sha256(freeze))
+        claim_confirmation(runtime_root()/'confirmation_claims',ident,run_id,sha256(freeze))
         ident['frozen_bank_receipt_sha256']=seal['bank_receipt_sha256']
         ident['freeze_sha256']=sha256(freeze)
 

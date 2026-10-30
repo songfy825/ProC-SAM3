@@ -9,6 +9,7 @@ import torch
 from .cache import SampleCache,write_sample,load_sample,write_json
 from .protocol import validate_manifest
 from .geometry import validate_encoder
+from .paths import interpreter_command
 
 
 def _fixture():
@@ -44,9 +45,7 @@ def negative_checks():
                 bad=json.loads(original);bad[1]['source_scene_id']=bad[0]['source_scene_id'];write_json(path,bad)
             elif case=='cache_corruption':path.write_bytes(original+b'deliberate corruption')
             else:write_json(path,{'requested':504,'actual':[1,3,1008,1008]})
-            cmd=[sys.executable,'-m','proc_research.audit','check','--case',case,'--root',str(root)]
-            # This read-only interpreter is on a noexec filesystem.
-            if sys.platform=='linux':cmd=['/lib64/ld-linux-x86-64.so.2',*cmd]
+            cmd=[*interpreter_command(),'-m','proc_research.audit','check','--case',case,'--root',str(root)]
             negative=subprocess.run(cmd,text=True,capture_output=True)
             path.write_bytes(original)
             restored=subprocess.run(cmd,text=True,capture_output=True)

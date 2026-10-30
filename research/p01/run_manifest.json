@@ -15,6 +15,17 @@
       "code_sha256": "5f8c193e655531cc00e1898878848f3a86f9a94dac35d0b128478756e359e166",
       "config_sha256": "73f79700a36f20d6741a0550e2aeb637973ba9b50b71ac857c8f15a41743ce23",
       "method_sha256": "3d1a8ef6a4b98917c8dfc9fe778179093958e773544457ab12514659396a44b0"
+    },
+    {
+      "run_id": "cpu-transfer-v2",
+      "kind": "CPU_SYNTHETIC_ACCEPTANCE",
+      "status": "PASS",
+      "tests": 60,
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2",
+      "verification_sha256": "a899f247f1c23545b27892985877a62960eedf23229cf5838dd068f1886be561",
+      "code_sha256": "ca1816ca8606689c2f4077851d89819758b38dead540c6be86807563659eb9a3",
+      "config_sha256": "73f79700a36f20d6741a0550e2aeb637973ba9b50b71ac857c8f15a41743ce23",
+      "method_sha256": "3d1a8ef6a4b98917c8dfc9fe778179093958e773544457ab12514659396a44b0"
     }
   ],
   "assets_initial_sha256": "dff4e04342f0091d65f59997bc42c8871ac073632f5dc986a4f8d63878560100",
@@ -28,5 +39,16 @@
   "source_scene_map": "PENDING external provenance evidence",
   "local_commit": "Implementation commit above; final HEAD also contains the documentation-only delivery receipt",
   "implementation_commit": "e28c65b15321008c6964fc84bdabec4355b7c8ae",
-  "engineering_status": "COMPLETE"
+  "engineering_status": "COMPLETE",
+  "transfer": {
+    "target": "Ubuntu x86_64 / RTX 4090",
+    "fork": "git@github.com:songfy825/ProC-SAM3.git",
+    "push_authorized": true,
+    "requirements_sha256": "027da4108d4aceaf6b4e25ef95499cbe2abcf274b5d7e6ee4d837b5a3c1fd5cb",
+    "fresh_install": "PENDING",
+    "GPU_validation": "PENDING",
+    "review": "PASS after fixes",
+    "preflight_sha256": "d97c8bd08fb5e033c23744ccca129fa09a92079d4a106f1610e1c85b9a490541",
+    "intermediate_run": "cpu-transfer-v1 superseded by v2 after evaluator resume fix"
+  }
 }

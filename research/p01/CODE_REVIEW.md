@@ -24,3 +24,14 @@ Additional author checks: non-PASS receipts rejected; confirmation bound to exac
 - Hook cleanup breaks the full-model reference cycle. Original PromptBank retains bounded text-embedding cache across the two dataset vocabularies; actual VRAM measurements remain pending and will include retained tensors.
 
 No unresolved Critical/Important findings remain after the documented fixes. No second reviewer pass is claimed: the fix pass is checked by new failing-then-passing tests and the final entire CPU suite. No baseline model outputs were mocked, and no synthetic result counts as real G0.
+
+## 4090 transfer review
+
+Independent `/root/transfer_review` reviewed the uncommitted transfer changes against `d7ad4f3`, then re-reviewed the fixes and performed a final narrow check. No edits or GPU activity by the reviewer. Findings and resolutions:
+
+- Changed label metadata at the same path could reuse a previous evaluation. Launcher receipts now bind input metadata hashes; the independent evaluator's `--verify-only` also rechecks GT and prediction bytes on resume. Actual synthetic PNG/NPY regression reproduces both changed-manifest and changed-GT failures before the fix.
+- Completed-stage reuse omitted stage, evidence kind, evaluated split and dependency checks. Resume now requires the expected real-model stage/kind, exact cache/bank receipts, split and confirmation seal/bank binding. Synthetic receipt validation fixtures are not model evidence.
+- An interrupted CPU stage permanently collided with its existing directory. Explicit `--retry-cpu` preserves the incomplete directory and file hashes in a new audit directory before retrying that CPU stage; verified GPU stages remain reused. Complete but corrupted receipts are still rejected.
+- Shell temporary/cache locations are selected before JSON settings are read. Transfer instructions explicitly set `P01_RUNTIME` to the same persistent runtime root as the JSON.
+
+Reviewer final finding: no remaining important issues. Ten transfer tests pass after fixes; complete final acceptance is recorded separately in `evidence/transfer-verification.json`. Source-method/frozen-contract acceptance thresholds remain unchanged. A fresh Ubuntu dependency installation and all GPU behavior are still unverified.

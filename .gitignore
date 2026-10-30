@@ -79,3 +79,7 @@ unexpanded_prompt_interference_visualizations/
 *.pt
 *.safetensors
 *.parquet
+.p01-runtime/
+.p01-env/
+/weights/
+*.tar.gz

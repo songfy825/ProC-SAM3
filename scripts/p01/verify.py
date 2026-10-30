@@ -18,7 +18,8 @@ def main():
     os.environ['CUDA_VISIBLE_DEVICES']='';os.environ['P01_ENABLE_GPU']='0'
     from proc_research.calibration.run import code_identity
     from proc_research.cache import sha256
-    python=['/lib64/ld-linux-x86-64.so.2',sys.executable]
+    from proc_research.paths import interpreter_command
+    python=interpreter_command()
     commands=[
         ('contracts',python+['-m','unittest','discover','-s','tests/research','-v']),
         ('negative_audits',python+['-m','proc_research.audit','negative','--output',str(output/'negative.json')]),
@@ -27,7 +28,7 @@ def main():
         ('original_model_unchanged',['git','diff','--exit-code','234c87e58fb08f02ba1cf163b2a73f5330d462e9',
                                     '--','sam3_segmentor_cached.py','core','sam3','configs','prompt_pools']),
     ]
-    for module in ('proc_research.calibration.run','proc_research.evaluate','proc_research.report','proc_research.prepare','proc_research.audit'):
+    for module in ('proc_research.calibration.run','proc_research.evaluate','proc_research.report','proc_research.prepare','proc_research.audit','proc_research.launch'):
         commands.append((module.replace('.','_')+'_help',python+['-m',module,'--help']))
     records=[]
     for name,cmd in commands:

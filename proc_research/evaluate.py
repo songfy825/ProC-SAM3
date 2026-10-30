@@ -73,11 +73,32 @@ def evaluate_predictions(prediction_index,label_manifest,output):
     return results
 
 
+def verify_evaluation(prediction_index,label_manifest,output):
+    """Resume audit stays in the independent evaluator, including GT byte hashes."""
+    p=Path(output);provenance=json.loads((p/'provenance.json').read_text())
+    if (provenance['prediction_index_sha256']!=sha256(prediction_index)
+        or provenance['label_manifest_sha256']!=sha256(label_manifest)):
+        raise ValueError('evaluation input metadata changed')
+    index=json.loads(Path(prediction_index).read_text())
+    labels=[json.loads(x) for x in Path(label_manifest).read_text().splitlines() if x.strip()]
+    lookup={(x['dataset'],x['image_id']):x for x in labels}
+    if len(lookup)!=len(labels):raise ValueError('duplicate label keys')
+    for r in index['predictions']:
+        if r['split']=='calibration':raise ValueError('calibration GT evaluation forbidden')
+        label=lookup[(r['dataset'],r['image_id'])]
+        if sha256(label['path'])!=label['sha256'] or sha256(r['path'])!=r['sha256']:
+            raise ValueError('prediction/GT integrity mismatch')
+    for name,h in provenance['output_sha256'].items():
+        if Path(name).is_absolute() or '..' in Path(name).parts or sha256(p/name)!=h:
+            raise ValueError('evaluation artifact changed')
+
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--predictions',required=True);parser.add_argument('--labels',required=True)
-    parser.add_argument('--output',required=True);args=parser.parse_args()
-    evaluate_predictions(args.predictions,args.labels,args.output)
+    parser.add_argument('--output',required=True);parser.add_argument('--verify-only',action='store_true');args=parser.parse_args()
+    if args.verify_only:verify_evaluation(args.predictions,args.labels,args.output)
+    else:evaluate_predictions(args.predictions,args.labels,args.output)
 
 
 if __name__=='__main__':main()

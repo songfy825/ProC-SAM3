@@ -1,0 +1,14 @@
+{
+  "schema": 1,
+  "kind": "real",
+  "development": {"path": null, "sha256": null},
+  "production_index": {"path": null, "sha256": null},
+  "production_manifest": {"path": null, "sha256": null},
+  "production_receipt": {"path": null, "sha256": null},
+  "independent_receipt": {"path": null, "sha256": null},
+  "production_log": {"path": null, "sha256": null},
+  "use_history": {"path": null, "sha256": null},
+  "producer_config": {"path": null, "sha256": null},
+  "producer_code_inventory": {"path": null, "sha256": null},
+  "asset_receipt": {"path": null, "sha256": null}
+}

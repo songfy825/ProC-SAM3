@@ -1,0 +1,569 @@
+{
+  "EFFECTIVENESS": "PENDING",
+  "ENGINEERING": "COMPLETE_WITH_DEVIATION",
+  "FUNCTIONAL_CPU_VERIFICATION": "PASS",
+  "IMPLEMENTATION": "COMPLETE",
+  "REAL_ACTION_SPACE": "PENDING",
+  "REAL_ORACLE": "PENDING",
+  "base_commit": "ec7f57ef2a3ec5cb166149a2fa85f5eff4a2f566",
+  "branch": "codex/p02-mask-action-space",
+  "date": "2026-10-30",
+  "execution_audit": {
+    "GPU_compute_calls": 0,
+    "MLLM_API_calls": 0,
+    "guarded_runtime_policy": {
+      "api_calls": 0,
+      "availability_answer": "constant False by CPU policy, no driver query",
+      "hardware_probes": 0,
+      "model_inference_calls": 0,
+      "scope": "policy for this guarded process only; not a historical session audit"
+    },
+    "known_boundary_incident": "One unguarded provenance unit-test invocation imported legacy CUDA autocast and called torch.cuda.is_available; exact number of transitive helper calls was not instrumented. See provenance-green-v3.log and REPORT.md. Fixed; final acceptance guarded.",
+    "model_downloads": 0,
+    "model_inference_calls": 0,
+    "whole_session_zero_CUDA_query_contract": "NOT_SATISFIED"
+  },
+  "final_verification": {
+    "commands": [
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/cpu_tests.py",
+          "--suite",
+          "p01"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/p01_contracts.log",
+        "log_sha256": "54bcbad769e155432f38596d0de332ad793fca0f942b4acc0f13066e50d6a07a",
+        "name": "p01_contracts",
+        "passed": true,
+        "seconds": 46.36833463096991,
+        "tests": 60
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/cpu_tests.py",
+          "--suite",
+          "p02"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/p02_contracts.log",
+        "log_sha256": "7b461cb50b9531885bb37611a7c4e88bc6cdbbf0d60cd89c24fda9b0e742110a",
+        "name": "p02_contracts",
+        "passed": true,
+        "seconds": 13.066254328005016,
+        "tests": 62
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/analyze.py",
+          "--help"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/analyze_help.log",
+        "log_sha256": "eb7e7f397708d625e4150bd2489cc8bf3792b8266a3d2a11df2aae1c2b572a57",
+        "name": "analyze_help",
+        "passed": true,
+        "seconds": 0.05972626700531691
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/analyze.py",
+          "--nonexistent-option"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 2,
+        "expected_exit": 2,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/analyze_usage_failure.log",
+        "log_sha256": "5b58a56cc577cf014d6e2c6cd205d20e9f555f4250b153ead1f9048b4a82405b",
+        "name": "analyze_usage_failure",
+        "passed": true,
+        "seconds": 0.07369219802785665
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/verify.py",
+          "--help"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/verify_help.log",
+        "log_sha256": "02352f5770ead4b5b488d0554a82727ba207a89265f06981f41db2a4966d0fee",
+        "name": "verify_help",
+        "passed": true,
+        "seconds": 0.062478476960677654
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/verify.py",
+          "--nonexistent-option"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 2,
+        "expected_exit": 2,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/verify_usage_failure.log",
+        "log_sha256": "10b721dee9d1861098f08dac2bd3b4786a1c4d5c0177dda4529b52ebe4437265",
+        "name": "verify_usage_failure",
+        "passed": true,
+        "seconds": 0.06002460699528456
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/analyze.py",
+          "--manifest",
+          "research/p02/input.real.template.json",
+          "--output",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/real-pending"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 2,
+        "expected_exit": 2,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/real_missing_pending.log",
+        "log_sha256": "39bdf666c1135ec0509f61aa002a99337d77e3afc3d3d85dbe372d728648a9f5",
+        "name": "real_missing_pending",
+        "passed": true,
+        "seconds": 3.547445533971768,
+        "status_contract": true
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/analyze.py",
+          "--manifest",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-input.json",
+          "--output",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-no-gt"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-no-gt.log",
+        "log_sha256": "d2ca25e16d33b98aeb4a56c2eac1eec62f430905f5a38cb0ec94f7858163bff9",
+        "name": "synthetic-no-gt",
+        "passed": true,
+        "seconds": 3.6323642539791763,
+        "status_contract": true
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/analyze.py",
+          "--manifest",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-input.json",
+          "--output",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-gt-0",
+          "--labels",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-labels.jsonl"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-gt-0.log",
+        "log_sha256": "d2ca25e16d33b98aeb4a56c2eac1eec62f430905f5a38cb0ec94f7858163bff9",
+        "name": "synthetic-gt-0",
+        "passed": true,
+        "seconds": 3.577770480012987,
+        "status_contract": true
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/analyze.py",
+          "--manifest",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-input.json",
+          "--output",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-gt-1",
+          "--labels",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-labels.jsonl"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-gt-1.log",
+        "log_sha256": "d2ca25e16d33b98aeb4a56c2eac1eec62f430905f5a38cb0ec94f7858163bff9",
+        "name": "synthetic-gt-1",
+        "passed": true,
+        "seconds": 3.940362218010705,
+        "status_contract": true
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/analyze.py",
+          "--manifest",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-input.json",
+          "--output",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-gt-deleted",
+          "--labels",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-labels.jsonl"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-gt-deleted.log",
+        "log_sha256": "d2ca25e16d33b98aeb4a56c2eac1eec62f430905f5a38cb0ec94f7858163bff9",
+        "name": "synthetic-gt-deleted",
+        "passed": true,
+        "seconds": 3.5654226780170575,
+        "status_contract": true
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/analyze.py",
+          "--manifest",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-input.json",
+          "--output",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-corrupt-receipt"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 1,
+        "expected_exit": 1,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-corrupt-receipt.log",
+        "log_sha256": "e3a0a41d31438d53096a7b3aad8b9c4252a6c170f2ddacb6ac30a5fc3e0af42b",
+        "name": "synthetic-corrupt-receipt",
+        "passed": true,
+        "seconds": 3.525825720978901,
+        "status_contract": true
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/analyze.py",
+          "--manifest",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-input.json",
+          "--output",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-restored"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-restored.log",
+        "log_sha256": "d2ca25e16d33b98aeb4a56c2eac1eec62f430905f5a38cb0ec94f7858163bff9",
+        "name": "synthetic-restored",
+        "passed": true,
+        "seconds": 3.7474448009743355,
+        "status_contract": true
+      },
+      {
+        "command": [
+          "bash",
+          "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/scripts/p02/python.sh",
+          "scripts/p02/analyze.py",
+          "--manifest",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-input.json",
+          "--output",
+          "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-cache-missing"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 2,
+        "expected_exit": 2,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-cache-missing.log",
+        "log_sha256": "96affcfcba0ecf8f0cf7d841469f54c1b9135398cd2b5b6ab7c510e309efb0be",
+        "name": "synthetic-cache-missing",
+        "passed": true,
+        "seconds": 3.7176483559887856,
+        "status_contract": true
+      },
+      {
+        "command": [
+          "sha256sum",
+          "-c",
+          "research/p01/evidence/contract-freeze.sha256"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/frozen_p01_contract.log",
+        "log_sha256": "5dd3e5c1ba8ca41ae805367e8b8cfb06d096a41099086c13c01f1507566c2581",
+        "name": "frozen_p01_contract",
+        "passed": true,
+        "seconds": 0.002702652011066675
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--exit-code",
+          "ec7f57ef2a3ec5cb166149a2fa85f5eff4a2f566",
+          "--",
+          "proc_research/cache.py",
+          "proc_research/evaluate.py",
+          "proc_research/baseline.py",
+          "proc_research/calibration",
+          "scripts/p01",
+          "tests/research",
+          "research/p01",
+          "sam3_segmentor_cached.py",
+          "core",
+          "sam3",
+          "configs",
+          "prompt_pools",
+          "METHOD.md",
+          "PROGRESS.md",
+          "BLOCKED.md"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/p01_original_unchanged.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "name": "p01_original_unchanged",
+        "passed": true,
+        "seconds": 0.01892286498332396
+      },
+      {
+        "command": [
+          "git",
+          "diff",
+          "--check"
+        ],
+        "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02",
+        "exit_code": 0,
+        "expected_exit": 0,
+        "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/whitespace.log",
+        "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "name": "whitespace",
+        "passed": true,
+        "seconds": 0.025711927970405668
+      }
+    ],
+    "gt_actions_byte_identical": true,
+    "input_hashes": {
+      "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/cache/synthetic-001/arrays.npz": "065cef0ca499e72b35aa60963895349c4194258dfe6d1072767a5d3c92adb069",
+      "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/cache/synthetic-001/meta.json": "6204d5f7ca919cdfacc21b583457fd6d3a387929bb45110c4752084bc3a476e0",
+      "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/cache/synthetic-001/receipt.json": "f4827bbd601733a21d4148985e8f5e27c17a9fd5c8b7105551893ce3be4f0583",
+      "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-development.jsonl": "5a860e11ed1e928073a938feda5e9aa64a6e5e08367e86268932d8ec966c356b",
+      "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-index.json": "422d47ade5f46e3ffebe607468d4fbebdc075e6d520a8f7aefeca0b1ed5f0c9b",
+      "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-input.json": "b867b0cb38cc3393a4c8e3d585a363f5041c4f234bef4c400e7feff1d114c7d9",
+      "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic-labels.jsonl": "7be959abac56ecf560b928cb3aed2ca63c494f90bfb84601ce048e70d4867bf7",
+      "/home/fengyi/E/CodeHome/Proc/runtime/p02/audit/acceptance-v3/synthetic-input/synthetic.png": "cbcde18f86434fdc363f48bd2cafc6843423b5a8689dd6a8b205ade4b3328290"
+    },
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/acceptance-v3/verification.json",
+    "sha256": "503069aedb06f5418aed458d27cc125e0782ba63dfa32f5aecb56b3ac184d799",
+    "source_hashes": {
+      "proc_research/correction/__init__.py": "3efdaddd75a3947cd2e9e6cfb6f318eef5cf4cf608edb8734e6b4686c76e4c90",
+      "proc_research/correction/actions.py": "6cd3b07184be3e5572b012e8047a2136414f6c7197be947a99583970ce41d7fc",
+      "proc_research/correction/evaluation.py": "ccf11aec03cef7817db8c1058704590e7dfabadfb828efa29bd4b876190d918a",
+      "proc_research/correction/provenance.py": "b09262dffef0d7cd8923b58cc8178cba13844527f28916859a47512f56f063f4",
+      "proc_research/correction/runtime.py": "999e075259063068ab3687cfac03009fb4327d024dfcb5d1153531c2c8458faf",
+      "scripts/p02/analyze.py": "a064ad7c66da72e1139ba6b297e5a2b26c99956c752919e918e3a7c9eaacc32b",
+      "scripts/p02/cpu_tests.py": "bdd3a328416496c3b39b193300de90978244fd27a03062ac8c21fa9fbe27fd96",
+      "scripts/p02/python.sh": "a598f1ae6cceeb9ac3c00083ff5aa68e8b2a95664908219bb67bb2755997ed55",
+      "scripts/p02/verify.py": "81f4ffa23147c65459ea26655a5dddcf7108e025473205ba87bcfecb8cc11296",
+      "tests/p02/test_actions.py": "83a7719d84063f82a1af76278860f62735634512735d019b7dd469f19f3e902d",
+      "tests/p02/test_cli.py": "a28946003b996a32e087358966705bd3e93fefa3e7d4d9a9c3e8f0da3d6bf148",
+      "tests/p02/test_evaluation.py": "fdf288c3feeb724de370edfa3cbc263605d1799c8b496922fe80e35e2acf3085",
+      "tests/p02/test_provenance.py": "434e96364b19d8d0f8ef27799ee52449da5c01c12ffa6203fb49ac15ed913a45",
+      "tests/p02/test_runtime.py": "1c9db41ba1a4e0d376e4dba884a721772c8fad96352634820f9810df2d07ba84"
+    },
+    "tests": {
+      "p01_contracts": 60,
+      "p02_contracts": 62
+    }
+  },
+  "local_commit": "See git log: implementation commit followed by documentation-only receipt if needed. No push/merge.",
+  "log_catalog": [
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/acceptance-v1.log",
+      "sha256": "c30fd216fc9076c5e91c432cefbf744c1ce959a3ffea587f1e49fb6e5caa11bc"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/acceptance-v2.log",
+      "sha256": "a580e63d1160ff8f50b4c1f08c821f57bf7113879298b0655c2f475de4fff63c"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/acceptance-v3.log",
+      "sha256": "a580e63d1160ff8f50b4c1f08c821f57bf7113879298b0655c2f475de4fff63c"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/actions-final.log",
+      "sha256": "f27dc47ad77d6444cd7e1a55cf4fbd06193022119209056898b4f689d09b41a8"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/actions-green-v1.log",
+      "sha256": "1fc4985c58de3f4216c8308bb6c9e3f92a994f722b95b873b1286ee5e10ddb70"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/actions-green-v2.log",
+      "sha256": "9ca6bee08fcb39ed975ba21a6fe54a833b58c8b4b1806ebec8791d4a2b814fc1"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/actions-mapping-green.log",
+      "sha256": "a1d811fa8d7729ce814bd6b1a0373abf0574250eaeb77e0b2b70614e981b2433"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/actions-mapping-red.log",
+      "sha256": "e8d57ab90d69852711691954a915006c6046a28cf126c80a51099fc1c3dae2d0"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/actions-raw-counts-red.log",
+      "sha256": "b9f1bc5be2972594b57caa907c8944b357c81e1b9cd8bad2eb753e9180401bb5"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/actions-red.log",
+      "sha256": "39e9c6b5b26a5fe82fca069738ee6f6f4f42c0aa1465ae4fd06a054b1f76b37e"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/actions-screen-green.log",
+      "sha256": "afffb8060507e1db8e8ca063c7e44db912c2c3d8faad16a7427bea40d5a78353"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/actions-screen-red.log",
+      "sha256": "7bd18d923498a21ce3061db7bc4fb5881861d5204ee60bd0f62ce917f2f92a7d"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/actions-summary-green.log",
+      "sha256": "ec98116d4c7b24dc6c31b971a99f0dcb20463335d2cd8c504b4edc5b622c8595"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/actions-summary-red.log",
+      "sha256": "b3bced50bb7c0e83ddc6e4975b15527a24ed04791c800788b7151d48884c4f73"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/cli-error-red.log",
+      "sha256": "58616dbdc6aec755d4dd5ffe88d18c9a2bed8960909043bb01a4f67cc5fb04ec"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/evaluation-final.log",
+      "sha256": "e61495456c052609f173a68a523d54e78794440d9112836e6beeca4eb233aa48"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/evaluation-first.log",
+      "sha256": "5ef6b757062b7259f4c190165c41e2a2935f073ab47121fd1c26b81f2eb43abf"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/evaluation-green.log",
+      "sha256": "891e06ad23ad19640aab6524e226206105462b0e9c8ff0290124127a95232870"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/evaluation-red.log",
+      "sha256": "52d1c21b8e9c4d890276580e29b7ef47cc1648a96960950001144301e626c9f7"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/evaluation-review-green.log",
+      "sha256": "f55441db96f589894d4c6ae36b03be8ce20bb2035e0e3fc841037542d6b687a4"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/evaluation-review-red.log",
+      "sha256": "e3b0f5fe9a05260e34725d31d474b7acf6c1b5dbafe827cdcc8768a713cdb7f0"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/evaluation-summary-red.log",
+      "sha256": "ce3eee3c1369e5b6b3b5f6d59e68626730a2cd0ab601768165b7445c67845653"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/guard-compat-green-partial.log",
+      "sha256": "ab71f56de9bd8bb81cd55d7f26d474b6db90cbb8d84ccb278cd0d0a27597b90a"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/guard-compat-red.log",
+      "sha256": "a3352cd955cb84cb3d028f66e02bc743e34db909043cc669419904c204156861"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/negative-status-red.log",
+      "sha256": "8a472d63e4cb3a8c6750f6bc21a894436bd125bfb7931a5d0a0f52afa80d6116"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/p01-regression-initial.log",
+      "sha256": "055ff59cc46ee458c626a2b16d7a32d81cac850a94194b64c0b64bff22e5bc31"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/provenance-green-v1.log",
+      "sha256": "2c0f701411101b5b03ec2c58facfffa993c9251a521e92d5011b117faaf3e2db"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/provenance-green-v2.log",
+      "sha256": "31590cb511c019f29f21de46a203d676805034ec12bb0f9545686f74f8f33d3e"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/provenance-green-v3.log",
+      "sha256": "81194506583c842a89410192073156b9324f15ad00e54b30ab162433942fbe5b"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/provenance-import-guard-green.log",
+      "sha256": "c1b92e821e467393b28e091f07cc835b07f3eaa8215446002c8137002ebda299"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/provenance-import-guard-red.log",
+      "sha256": "a7617221a2ec1855e127b30837b67e7039002fddc5046b29cfb59007fa880bfc"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/provenance-red.log",
+      "sha256": "9019b805cde86b6a7c9e16f333e9093f70073ef22aac7ee3b0010d0100ef586b"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/provenance-stream-v1.log",
+      "sha256": "82a0bbc1c07acff60cc87e6e0fbb5b31d52f5fd0e0662d473ffd0a9024f9e8f9"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/provenance-structural-green-v1.log",
+      "sha256": "a2637404f7ed5285cfea679938a3598487b4e90f628756b3d2099a7886cd3239"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/runtime-green.log",
+      "sha256": "49f6f88c763ecd597df36a838b7fb2c453305760ea47c87a892edee702d1e95d"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/runtime-red.log",
+      "sha256": "5356050c19ff2dd63cbeca09b147b57c52fbefc1bc56e9e8c127fbdd930c8c2b"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/acceptance-v1/verification.json",
+      "sha256": "b2a695715d83d61984d6a4e152a9200682d02e0c51b50c22506ac5315d9460d1",
+      "status": "FAIL"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/acceptance-v2/verification.json",
+      "sha256": "b5b53d6442b0033e853a62e896121de44ac2bf94859f59e54c4e1bf915f745e6",
+      "status": "PASS"
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/acceptance-v3/verification.json",
+      "sha256": "503069aedb06f5418aed458d27cc125e0782ba63dfa32f5aecb56b3ac184d799",
+      "status": "PASS"
+    }
+  ],
+  "method_sha256": "71799492c866227085f8bc46d8eede9b942c006ff424c5828ee1515689308595",
+  "real_cache_inputs": [],
+  "schema": 1,
+  "source_repository": "No writes by this task; HEAD/branch/index/tracked tree unchanged. Concurrent untracked transfer additions recorded.",
+  "synthetic_evidence_only": true,
+  "task": "P02-mask-action-space",
+  "task0_evidence": {
+    "/home/fengyi/CodeHome/Proc/runtime/p02/audit/data-history.json": "e56fd1118481b7e8eb9291555577150675a7a25891c3bf201cd4d49cd97dec16",
+    "/home/fengyi/CodeHome/Proc/runtime/p02/audit/isolation.json": "91e6b4ec6877ce99cb8de149dba5091766aeea9409da704e4042b17f3c9c9646",
+    "/home/fengyi/CodeHome/Proc/runtime/p02/audit/source-head-after.txt": "1c757381833155751d180281e76f6ffe444b0e39d3e1c16a3af81898359738bb",
+    "/home/fengyi/CodeHome/Proc/runtime/p02/audit/source-head-before.txt": "1c757381833155751d180281e76f6ffe444b0e39d3e1c16a3af81898359738bb",
+    "/home/fengyi/CodeHome/Proc/runtime/p02/audit/source-index-after.txt": "e801db0f654418bb60dc8a5a4f7109bbb49e26a91e406fd3c683f39fcc139f8b",
+    "/home/fengyi/CodeHome/Proc/runtime/p02/audit/source-index-before.txt": "e801db0f654418bb60dc8a5a4f7109bbb49e26a91e406fd3c683f39fcc139f8b",
+    "/home/fengyi/CodeHome/Proc/runtime/p02/audit/source-status-after.txt": "97f28e3c27aa5702d1853915fb47ba358c26e7e1d145ca0a3ff315372655d69c",
+    "/home/fengyi/CodeHome/Proc/runtime/p02/audit/source-status-before.txt": "84f6c42b36fcc4ce2335abeb58186790868cc19810542bc212cac1fae754dca0"
+  }
+}

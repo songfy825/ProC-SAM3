@@ -1,6 +1,6 @@
 # BLOCKED
 
-Engineering: **无 / no active blocker**. Implementation, 50 CPU tests and independent review/fix pass are complete; local commit is being finalized.
+Engineering: **无 / no active blocker**. Implementation, 50 CPU tests and independent review/fix pass are complete; implementation is committed locally; no push or merge.
 
 Research gates PENDING by explicit user instruction: no GPU work this round. nvidia-smi -L exit 9 (driver unavailable); no inference or CUDA allocation attempted. Do not queue or wait for GPU availability.
 

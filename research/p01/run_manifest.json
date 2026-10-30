@@ -26,5 +26,7 @@
   "confirmation": "PENDING",
   "research_conclusion": "PENDING",
   "source_scene_map": "PENDING external provenance evidence",
-  "local_commit": "See local branch HEAD; final commit recorded in PROGRESS.md"
+  "local_commit": "Implementation commit above; final HEAD also contains the documentation-only delivery receipt",
+  "implementation_commit": "e28c65b15321008c6964fc84bdabec4355b7c8ae",
+  "engineering_status": "COMPLETE"
 }

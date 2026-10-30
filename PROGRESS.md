@@ -12,7 +12,7 @@ Read this file, BLOCKED.md, research/p01/run_manifest.json and evidence hashes b
 - [x] Implement official ECD parity and ECD-ProC multi-view controls.
 - [x] Implement gated real-model adapter, G0, pilot/confirmation run entrypoints and RUN_GPU.md.
 - [x] Run CPU contracts, deliberate negative audits, code review and corrective checks.
-- [ ] Commit locally; record commit, evidence and pending research gates.
+- [x] Commit locally; record commit, evidence and pending research gates.
 
 ## Findings / rulings
 - User's explicit clone/scope instructions supersede historical plan-only text and worktree workflow. No new design approval required.
@@ -40,3 +40,6 @@ METHOD.md and 26 CPU contracts written before implementation. SHA256 frozen in r
 - CPU preflight: CUDA initialized=false, source status clean at 742ce170…, current weight hash equals initial, 81 environment package versions recorded. 166,061,670,400 free bytes at that audit (about 154.7 GiB). No dependency installation or external environment modification.
 - Real GPU stages/online latency/VRAM/accuracy remain PENDING. There is no queued work, no automatic retry/availability polling. Actual source-scene map and prompt-pool construction provenance remain research limitations.
 - RUN_GPU.md commands are prepared but have not been executed. No old project result was copied into G0.
+
+### Local delivery
+Implementation commit: `e28c65b15321008c6964fc84bdabec4355b7c8ae` on `codex/p01-scale-calibration`. Final verified code SHA256: `5f8c193e655531cc00e1898878848f3a86f9a94dac35d0b128478756e359e166`. A subsequent documentation-only receipt commit records this hash; no production code changed after the 50-test acceptance. No push or merge performed. This round engineering goal COMPLETE; full P01/GPU/research acceptance PENDING.

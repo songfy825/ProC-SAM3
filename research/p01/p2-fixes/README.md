@@ -1,6 +1,6 @@
 # P01 F1/F2 repairs
 
-User-authorized CPU-only repairs following Astra Ultra review of `ba663c4`, starting from archived review commit `e8e07cb`. Independent re-review is required before push. F3 is a recorded nonblocking P3 and was not changed in this scope.
+User-authorized CPU-only repairs following Astra Ultra review of `ba663c4`, starting from archived review commit `e8e07cb`. Implementation commit `4013778dc6bd476bfa5182514498747e77c08ffe` has now passed independent Astra Ultra re-review: F1/F2 CLOSED, CPU engineering PASS, six additional independent CPU boundary checks passed. See [the signed re-review](../reviews/2026-10-30-astra-ultra-rereview/REVIEW.md). F3 is a recorded nonblocking P3 and was not changed in this scope. GPU/research remain PENDING.
 
 F1 now checks the full int64 prediction budget on the output filesystem before creating the decode run. It includes 64 KiB per file for NPY header/allocation and 1 MiB plus 64 KiB per image for metadata/index/receipt headroom. It checks the remaining budget before every prediction write and again before final metadata. Other processes can still change disk space between system calls; these guards do not reserve disk blocks. A failure retains incomplete CPU evidence, and the existing explicit launcher recovery reuses the completed upstream cache.
 

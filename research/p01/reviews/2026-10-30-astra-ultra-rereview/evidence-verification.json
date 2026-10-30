@@ -1,0 +1,180 @@
+{
+  "status": "PASS",
+  "head": "4013778dc6bd476bfa5182514498747e77c08ffe",
+  "git_status": "",
+  "historical_CPU_suite": {
+    "tests": 70,
+    "all_commands_exit_zero": true,
+    "no_skips": true
+  },
+  "RED": {
+    "tests": 10,
+    "failures": 9,
+    "errors": 0,
+    "exit_code": 1
+  },
+  "GREEN": {
+    "tests": 10,
+    "exit_code": 0
+  },
+  "code_sha256": "df52a7636ed6fb0de5a613ceea513c68632fdcca7f61c8d415ce900d45caab59",
+  "code_files_hashed": 364,
+  "evidence_checks": [
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/research/p01/reviews/2026-10-30-astra-ultra/REVIEW.md",
+      "sha256": "bbf4370c1e900595f0f7a0b3e44126ccaf0417369278968feb0f1f4aa688c513",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_p2_regressions.py",
+      "sha256": "33a36d9a6365d83114d81560ab6168cd57e1b200554af420749b45dabb5884f4",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/p2-fixes-v1/test-freeze.json",
+      "sha256": "718dae22142e0803481fb363b1d0f0b2f800fdeebf1eb4d72d63888785a7f178",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/p2-fixes-v1/red.json",
+      "sha256": "2fc68d12be0b4dfcbda02c8713806ce672d4f0b38f6991fcfd9b659710c19c8b",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/p2-fixes-v1/f1-green.json",
+      "sha256": "adec6cba67d9f55d15ba3be2d6b2271843e9b6342b2ef8f2db2cc32ee211ed40",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/p2-fixes-v1/green.json",
+      "sha256": "d01766c04c906a5ceffb9facf13e2f60d226576af8f28ea877b4079061106603",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/p2-fixes-v1/red.log",
+      "sha256": "338a07e40756ecef6a471f8cc74f049666c640ee5c4a9b64ee62a850d30c4c8b",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/p2-fixes-v1/f1-green.log",
+      "sha256": "c5ce7d5fe4d6719d70cbe9c38686ee32af5c7aa1cff4b7ce2ed70f28f77636f8",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/p2-fixes-v1/green.log",
+      "sha256": "b6e5597847e32ca68bb9333342fa4524604e9021091b21044e1227708642873f",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/research/p01/p2-fixes/evidence/verification.json",
+      "sha256": "0e0b19a7b107e0e969d8145690e76d490dc857ca3a4af030cd66056239ae7098",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/verification.json",
+      "sha256": "0e0b19a7b107e0e969d8145690e76d490dc857ca3a4af030cd66056239ae7098",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/contracts.log",
+      "sha256": "4c78f5d61dbbea89da6acbac2686f5e00c39b414d371bd3f0f551625e85b0396",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/negative_audits.log",
+      "sha256": "629db2c5f5139a1281dcb4be90c5100bb88710f641e84ba3804eebd772fb964c",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/frozen_contract.log",
+      "sha256": "5dd3e5c1ba8ca41ae805367e8b8cfb06d096a41099086c13c01f1507566c2581",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/whitespace.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/original_model_unchanged.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/proc_research_calibration_run_help.log",
+      "sha256": "33b0ce7384339f984e0a2f93a3f1ebd06e524842d21e46af5c42f0e9138d7fc9",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/proc_research_evaluate_help.log",
+      "sha256": "ed40ca1d5891e4d1dba9628eb161587d85ce9460e0fb9970a9d1c02e405d7a8b",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/proc_research_report_help.log",
+      "sha256": "bdbafdaf156b1affe7499f3edc1d923ad5b3b84737e3b6dd19774531f83e2195",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/proc_research_prepare_help.log",
+      "sha256": "ff69ae99569fc6dc8f2369a36de53ccae90fa5845223281df7daa6ccde6d6774",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/proc_research_audit_help.log",
+      "sha256": "5ad57e5164baa58dc52c5110d5b7f46edf41bddd934db530b48f2a7079d7c79f",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1/proc_research_launch_help.log",
+      "sha256": "a7daee8cace0fe3ba64c51e4709180a1a4d43bed4a81ad524c9adcc458fd77bd",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_contracts.py",
+      "sha256": "f841b17fc501c16e509bbe37b0d2ea3fdf9c47bbbba8132962094248b9eab665",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_p2_regressions.py",
+      "sha256": "33a36d9a6365d83114d81560ab6168cd57e1b200554af420749b45dabb5884f4",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_pipeline.py",
+      "sha256": "b8860aba50ca8645628fcb43b91f36937054f42ed4798d098521e4d0d50bc2af",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_review_fixes.py",
+      "sha256": "ceb35e40cfa69b1d2f208a93ce1b393c92f21cc9f31f53b39fa72912e5577ea6",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_runtime.py",
+      "sha256": "4252c12864236096a1249247cdc04cbbe81903541341f07e66d295c78cf478f9",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_stage_gates.py",
+      "sha256": "cbaab86863ccf4f45f2f3eb77834e0660fbaed9d9f7771f7988a6793da4fb3f1",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_transfer.py",
+      "sha256": "a69bed40fe1fa663fc7f2b9a1d0956144be405246302cc8944f9790de7362b3a",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/METHOD.md",
+      "sha256": "3d1a8ef6a4b98917c8dfc9fe778179093958e773544457ab12514659396a44b0",
+      "matches": true
+    },
+    {
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/research/p01/config.json",
+      "sha256": "73f79700a36f20d6741a0550e2aeb637973ba9b50b71ac857c8f15a41743ce23",
+      "matches": true
+    }
+  ],
+  "scope": "Small evidence and production source only. No datasets, weights, torch import or GPU activity."
+}

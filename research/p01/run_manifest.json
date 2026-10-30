@@ -50,27 +50,28 @@
   "source_scene_map": "PENDING external provenance evidence",
   "local_commit": "Implementation commit above; final HEAD also contains the documentation-only delivery receipt",
   "implementation_commit": "e28c65b15321008c6964fc84bdabec4355b7c8ae",
-  "engineering_status": "CPU_PASS_AWAITING_ASTRA_ULTRA_REREVIEW",
+  "engineering_status": "PASS_AFTER_P2_FIXES_AND_ASTRA_ULTRA_REREVIEW",
   "strict_review": {
-    "run_id": "astra-ultra-review-v1",
-    "reviewed_commit": "ba663c4bfe65c047932aaf0271d6ca27503b4c50",
+    "run_id": "astra-ultra-rereview-v1",
+    "reviewed_commit": "4013778dc6bd476bfa5182514498747e77c08ffe",
     "model": "gpt-6-astra",
     "reasoning_effort": "ultra",
-    "report": "research/p01/reviews/2026-10-30-astra-ultra/REVIEW.md",
-    "report_sha256": "bbf4370c1e900595f0f7a0b3e44126ccaf0417369278968feb0f1f4aa688c513",
+    "report": "research/p01/reviews/2026-10-30-astra-ultra-rereview/REVIEW.md",
+    "report_sha256": "645d1a6f63c043eb0b992d1b540706a61a1452a6b80475296623dbaf9bb4ab17",
+    "code_sha256": "df52a7636ed6fb0de5a613ceea513c68632fdcca7f61c8d415ce900d45caab59",
     "method": "CONDITIONAL_PASS",
-    "engineering": "REQUEST_CHANGES",
+    "engineering": "PASS_P2_REPAIR_SCOPE",
     "real_run_readiness": "NOT_READY",
     "research": "PENDING",
-    "confirmed_P2": [
+    "closed_P2": [
       "F1_prediction_disk_reserve",
       "F2_report_exact_bank_binding"
     ],
-    "confirmed_P3": [
+    "known_nonblocking_P3": [
       "F3_dataset_policy_validation"
     ],
-    "implementation_changed": false,
-    "historical_hash_checks_passed": 40,
+    "evidence_hash_checks_passed": 31,
+    "independent_CPU_boundary_probes": 6,
     "new_cpu_probe_exit_code": 0,
     "cuda_initialized": false
   },
@@ -109,9 +110,38 @@
     ],
     "CPU_acceptance": "cpu-p2-v1",
     "regression_tests": 10,
-    "review": "PENDING",
-    "push": "PENDING review PASS",
+    "review": "PASS",
     "F3": "nonblocking P3 retained; not changed",
-    "GPU": "PENDING; not run"
-  }
+    "GPU": "PENDING; not run",
+    "implementation_commit": "4013778dc6bd476bfa5182514498747e77c08ffe",
+    "push_target": "git@github.com:songfy825/ProC-SAM3.git",
+    "push_branch": "codex/p01-scale-calibration",
+    "delivery_receipt": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/p2-fixes-v1/delivery.json"
+  },
+  "strict_review_history": [
+    {
+      "run_id": "astra-ultra-review-v1",
+      "reviewed_commit": "ba663c4bfe65c047932aaf0271d6ca27503b4c50",
+      "model": "gpt-6-astra",
+      "reasoning_effort": "ultra",
+      "report": "research/p01/reviews/2026-10-30-astra-ultra/REVIEW.md",
+      "report_sha256": "bbf4370c1e900595f0f7a0b3e44126ccaf0417369278968feb0f1f4aa688c513",
+      "method": "CONDITIONAL_PASS",
+      "engineering": "REQUEST_CHANGES",
+      "real_run_readiness": "NOT_READY",
+      "research": "PENDING",
+      "confirmed_P2": [
+        "F1_prediction_disk_reserve",
+        "F2_report_exact_bank_binding"
+      ],
+      "confirmed_P3": [
+        "F3_dataset_policy_validation"
+      ],
+      "implementation_changed": false,
+      "historical_hash_checks_passed": 40,
+      "new_cpu_probe_exit_code": 0,
+      "cuda_initialized": false
+    }
+  ],
+  "current_code_sha256": "df52a7636ed6fb0de5a613ceea513c68632fdcca7f61c8d415ce900d45caab59"
 }

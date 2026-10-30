@@ -1,0 +1,50 @@
+{
+  "code_sha256": "df52a7636ed6fb0de5a613ceea513c68632fdcca7f61c8d415ce900d45caab59",
+  "cuda_initialized": false,
+  "probes": {
+    "drop_before_metadata": {
+      "completed_receipt": false,
+      "error": "cache capacity: free=21474836479, need=1310720, reserve=21474836480",
+      "partial_outputs_preserved": true,
+      "queries": 48,
+      "status": "PASS",
+      "written_before_rejection": 44
+    },
+    "drop_between_methods": {
+      "completed_receipt": false,
+      "error": "cache capacity: free=21474836479, need=4177280, reserve=21474836480",
+      "partial_outputs_preserved": true,
+      "queries": 4,
+      "status": "PASS",
+      "written_before_rejection": 1
+    },
+    "heterogeneous_shapes": {
+      "budget_bytes": 4243584,
+      "completed_receipt": true,
+      "metadata_headroom": 1310720,
+      "methods": 11,
+      "output_files": 44,
+      "raw_prediction_bytes": 49280,
+      "status": "PASS",
+      "unique_images": 4,
+      "views_per_image": 2
+    },
+    "missing_frozen": {
+      "error": "confirmation must use the exact frozen calibration bank",
+      "evaluation_read_before_rejection": false,
+      "status": "PASS"
+    },
+    "wrong_bank": {
+      "error": "report must use the exact calibration bank that produced predictions",
+      "evaluation_read_before_rejection": false,
+      "status": "PASS"
+    },
+    "wrong_frozen": {
+      "error": "confirmation must use the exact frozen calibration bank",
+      "evaluation_read_before_rejection": false,
+      "status": "PASS"
+    }
+  },
+  "scope": "CPU synthetic boundary probes only; no model construction or real GPU acceptance",
+  "status": "PASS"
+}

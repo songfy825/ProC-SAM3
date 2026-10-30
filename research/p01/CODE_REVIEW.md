@@ -35,3 +35,9 @@ Independent `/root/transfer_review` reviewed the uncommitted transfer changes ag
 - Shell temporary/cache locations are selected before JSON settings are read. Transfer instructions explicitly set `P01_RUNTIME` to the same persistent runtime root as the JSON.
 
 Reviewer final finding: no remaining important issues. Ten transfer tests pass after fixes; complete final acceptance is recorded separately in `evidence/transfer-verification.json`. Source-method/frozen-contract acceptance thresholds remain unchanged. A fresh Ubuntu dependency installation and all GPU behavior are still unverified.
+
+## Astra Ultra strict review and P2 closure
+
+The user-requested Astra Ultra review of `ba663c4` found two P2 contract gaps despite the historical passing tests: prediction capacity protection and exact report/bank provenance. Its unchanged report is in `reviews/2026-10-30-astra-ultra/REVIEW.md`.
+
+Repair commit `4013778` adds ten regressions that failed against the old implementation and passed without weakening assertions, plus local fixes in decode/report. Full acceptance `cpu-p2-v1` passed 70 tests without skips. Astra Ultra independently re-reviewed the exact repair commit, verified hashes and added six new CPU boundary probes; all passed. F1/F2 are CLOSED, no new blocking finding. Signed report and evidence: `reviews/2026-10-30-astra-ultra-rereview/`. F3 remains a nonblocking P3 outside the two requested fixes. No GPU or research acceptance is implied.

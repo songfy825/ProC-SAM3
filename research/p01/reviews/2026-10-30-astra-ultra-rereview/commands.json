@@ -1,0 +1,26 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "key": "evidence",
+      "command": "python3 /home/fengyi/CodeHome/Proc/runtime/p01/audit/astra-ultra-rereview-v1/verify_evidence.py > /home/fengyi/CodeHome/Proc/runtime/p01/audit/astra-ultra-rereview-v1/evidence-verification.log 2>&1",
+      "chunk_id": "c2e7d5",
+      "wall_time_seconds": 0.171781101,
+      "exit_code": 0,
+      "original_token_count": 0,
+      "output": ""
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "key": "boundaries",
+      "command": "CUDA_VISIBLE_DEVICES='' P01_ENABLE_GPU=0 PYTHONDONTWRITEBYTECODE=1 OMP_NUM_THREADS=1 MKL_NUM_THREADS=1 OPENBLAS_NUM_THREADS=1 P01_PYTHON=/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python P01_RUNTIME=/home/fengyi/CodeHome/Proc/runtime/p01/audit/astra-ultra-rereview-v1/runtime bash scripts/p01/python.sh /home/fengyi/CodeHome/Proc/runtime/p01/audit/astra-ultra-rereview-v1/probe_boundaries.py > /home/fengyi/CodeHome/Proc/runtime/p01/audit/astra-ultra-rereview-v1/boundary-probes.log 2>&1",
+      "chunk_id": "074e68",
+      "wall_time_seconds": 0.000015573,
+      "original_token_count": 0,
+      "output": "",
+      "exit_code": 0
+    }
+  }
+]

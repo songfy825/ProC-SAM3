@@ -1,6 +1,6 @@
 # BLOCKED
 
-Engineering: **P2 fixes implemented; Astra Ultra re-review PENDING**. F1 prediction capacity checks and F2 report bank binding now have RED→GREEN regressions, and full CPU acceptance `cpu-p2-v1` passed 70 tests without skips. Strict sign-off and push await the requested independent re-review. The original findings and prior evidence are preserved in `research/p01/reviews/2026-10-30-astra-ultra/REVIEW.md`; repair evidence is in `research/p01/p2-fixes/evidence/`. F3 dataset-set validation remains a documented nonblocking P3, outside the requested two fixes.
+Engineering blockers: **无 / none for the requested F1/F2 repair scope**. Both P2 findings are CLOSED after RED→GREEN regressions, 70 passing CPU tests (no skips), and Astra Ultra independent re-review of `4013778`. The reviewer added six passing CPU boundary probes and found no new blocking issue. See `research/p01/reviews/2026-10-30-astra-ultra-rereview/REVIEW.md`. F3 dataset-set validation remains a documented nonblocking P3, outside the requested two fixes; it has not been marked fixed.
 
 Research gates PENDING by explicit user instruction: no GPU work this round. The initial audit recorded nvidia-smi exit 9; this is historical, not a current availability claim. This transfer follow-up did not probe GPU availability, run inference or allocate CUDA memory. Do not queue or wait for GPU availability.
 

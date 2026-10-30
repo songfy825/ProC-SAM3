@@ -2,7 +2,9 @@
 
 Research status: **PENDING / 证据不足**. No real P01 model inference, G0, pilot or confirmation has been executed in this round. There is no measured accuracy gain, loss, online latency or VRAM claim. The research hypothesis is neither supported nor refuted by CPU synthetic tests.
 
-Latest strict engineering assessment: **REQUEST_CHANGES** after the user-requested Astra Ultra review of commit `ba663c4` on 2026-10-30. The method is conditionally acceptable, but the complete engineering contract is not yet signed off: F1 prediction disk-reserve protection and F2 exact report/bank receipt binding need local fixes and targeted CPU re-review. No P0/P1 defect was confirmed; F3 dataset-policy validation is a nonblocking P3. No implementation was changed during review. See `research/p01/reviews/2026-10-30-astra-ultra/REVIEW.md`.
+Latest strict engineering assessment: **PASS for the requested F1/F2 CPU repair scope**, following Astra Ultra re-review of implementation commit `4013778dc6bd476bfa5182514498747e77c08ffe`. Both P2 findings are CLOSED: prediction capacity guards and exact report/bank binding have unchanged RED→GREEN regressions, full 70-test CPU acceptance without skips, and six additional independent passing boundary probes. Production SHA256 is `df52a7636ed6fb0de5a613ceea513c68632fdcca7f61c8d415ce900d45caab59`. F3 dataset-policy validation remains a known nonblocking P3. See `research/p01/reviews/2026-10-30-astra-ultra-rereview/REVIEW.md`; the original request-changes report is retained unchanged.
+
+The reviewer permits the user-authorized fork push. This is not a GPU execution or merge approval, and does not establish model accuracy or actual launch readiness. Scene evidence, target environment installation and real GPU G0/pilot/confirmation remain PENDING.
 
 Historical engineering delivery: **60 CPU tests (no skips), prior independent review and transfer preparation PASS.** The original 50-test delivery and subsequent transfer acceptance remain valid evidence of what was tested; they do not cover the newly reproduced gaps. See PROGRESS.md and `research/p01/evidence/transfer-verification.json`. GPU and research status remain PENDING.
 

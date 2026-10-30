@@ -1,0 +1,43 @@
+{
+  "review_id": "astra-ultra-rereview-v1",
+  "model": "gpt-6-astra",
+  "reasoning_effort": "ultra",
+  "reviewed_commit": "4013778dc6bd476bfa5182514498747e77c08ffe",
+  "code_sha256": "df52a7636ed6fb0de5a613ceea513c68632fdcca7f61c8d415ce900d45caab59",
+  "source_directory": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/astra-ultra-rereview-v1",
+  "files": {
+    "REVIEW.md": {
+      "sha256": "645d1a6f63c043eb0b992d1b540706a61a1452a6b80475296623dbaf9bb4ab17",
+      "bytes": 13111
+    },
+    "commands.json": {
+      "sha256": "bd42e8e872d1f4dd71966ead5100556136912da8ef9fed88d1d32601d6d5cd35",
+      "bytes": 1188
+    },
+    "evidence-verification.json": {
+      "sha256": "72d39dde6fb5fdec5d720bbbfd1520ce853b0bffff810356bbbb272fc70393fb",
+      "bytes": 7186
+    },
+    "boundary-results.json": {
+      "sha256": "6a5cfc2a67e357a09e460f2fb0156d8dfea2fd6f584ead81c0e3d681d3222c74",
+      "bytes": 1644
+    },
+    "verify_evidence.py": {
+      "sha256": "89f9dcbba9fd667d459e87f6d104624b1c62fd361276b9669de08564aab357c2",
+      "bytes": 4190
+    },
+    "probe_boundaries.py": {
+      "sha256": "0549097f013040c1281739b2d17c69a3dc925d9f51a95f11c9fd858e58aa3812",
+      "bytes": 6146
+    },
+    "final-verification.json": {
+      "sha256": "5f0e01bd7d7f91e72ddf15b64d7ab9e619f62ef8af5f4d4fdcfa39cbbb30c969",
+      "bytes": 1065
+    }
+  },
+  "status": "PASS",
+  "F1": "CLOSED",
+  "F2": "CLOSED",
+  "F3": "OPEN_NONBLOCKING_P3",
+  "GPU_and_research": "PENDING"
+}

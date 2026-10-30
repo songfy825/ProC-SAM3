@@ -1,0 +1,27 @@
+{
+  "config_probe": {
+    "accepted": [
+      "LoveDA"
+    ],
+    "caveat": "Normal launcher copies the tracked two-dataset config; this concerns standalone config validation.",
+    "changed_field": "datasets"
+  },
+  "cuda_initialized": false,
+  "disk_reserve_probe": {
+    "decode_completed": true,
+    "disk_queries": 0,
+    "prediction_bytes_written": 39424,
+    "prediction_files_written": 44,
+    "required_reserve_bytes": 21474836480,
+    "simulated_free_bytes": 21474836479
+  },
+  "kind": "INDEPENDENT_CPU_SYNTHETIC_REVIEW_ONLY",
+  "report_bank_probe": {
+    "caveat": "Both banks are deterministic fits to the same synthetic cache; this proves absent receipt binding, not changed scientific metrics.",
+    "different_receipt": true,
+    "prediction_bank_receipt_sha256": "382939da15aee18189b8b972fd8853dd25f4df5a78563c674e0d7c202299e163",
+    "provided_bank_receipt_sha256": "3146e59befa226b901b98c4f2e91e8f8f22c46548f3440264e1912ace4ae258a",
+    "report_completed": true,
+    "research_status": "PENDING_SYNTHETIC_ONLY"
+  }
+}

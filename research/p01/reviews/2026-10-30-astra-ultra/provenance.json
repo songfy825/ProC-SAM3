@@ -1,0 +1,295 @@
+{
+  "review_id": "astra-ultra-review-v1",
+  "requested_model": "gpt-6-astra",
+  "requested_reasoning_effort": "ultra",
+  "reviewed_head": "ba663c4bfe65c047932aaf0271d6ca27503b4c50",
+  "started_at": "2026-10-30T20:33:24.871562+08:00",
+  "working_tree_status_at_start": "",
+  "scope": "Read-only P01 plan/code/evidence review; no GPU, no repairs",
+  "checks": [
+    {
+      "name": "transfer-verification",
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/research/p01/evidence/transfer-verification.json",
+      "expected": "a899f247f1c23545b27892985877a62960eedf23229cf5838dd068f1886be561",
+      "actual": "a899f247f1c23545b27892985877a62960eedf23229cf5838dd068f1886be561",
+      "match": true
+    },
+    {
+      "name": "test-source",
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_contracts.py",
+      "expected": "f841b17fc501c16e509bbe37b0d2ea3fdf9c47bbbba8132962094248b9eab665",
+      "actual": "f841b17fc501c16e509bbe37b0d2ea3fdf9c47bbbba8132962094248b9eab665",
+      "match": true
+    },
+    {
+      "name": "test-source",
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_pipeline.py",
+      "expected": "b8860aba50ca8645628fcb43b91f36937054f42ed4798d098521e4d0d50bc2af",
+      "actual": "b8860aba50ca8645628fcb43b91f36937054f42ed4798d098521e4d0d50bc2af",
+      "match": true
+    },
+    {
+      "name": "test-source",
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_review_fixes.py",
+      "expected": "ceb35e40cfa69b1d2f208a93ce1b393c92f21cc9f31f53b39fa72912e5577ea6",
+      "actual": "ceb35e40cfa69b1d2f208a93ce1b393c92f21cc9f31f53b39fa72912e5577ea6",
+      "match": true
+    },
+    {
+      "name": "test-source",
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_runtime.py",
+      "expected": "4252c12864236096a1249247cdc04cbbe81903541341f07e66d295c78cf478f9",
+      "actual": "4252c12864236096a1249247cdc04cbbe81903541341f07e66d295c78cf478f9",
+      "match": true
+    },
+    {
+      "name": "test-source",
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_stage_gates.py",
+      "expected": "cbaab86863ccf4f45f2f3eb77834e0660fbaed9d9f7771f7988a6793da4fb3f1",
+      "actual": "cbaab86863ccf4f45f2f3eb77834e0660fbaed9d9f7771f7988a6793da4fb3f1",
+      "match": true
+    },
+    {
+      "name": "test-source",
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/tests/research/test_transfer.py",
+      "expected": "a69bed40fe1fa663fc7f2b9a1d0956144be405246302cc8944f9790de7362b3a",
+      "actual": "a69bed40fe1fa663fc7f2b9a1d0956144be405246302cc8944f9790de7362b3a",
+      "match": true
+    },
+    {
+      "name": "prior-log:contracts",
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/contracts.log",
+      "expected": "800f089646c799abab968cad4771bdbfc663efb492157f8fd3b2b4b8d1d297b2",
+      "actual": "800f089646c799abab968cad4771bdbfc663efb492157f8fd3b2b4b8d1d297b2",
+      "match": true
+    },
+    {
+      "name": "prior-log:negative_audits",
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/negative_audits.log",
+      "expected": "41de335582ca8f91078f44bf68bfc3802c44f1d26fcdbc70054a8ea81fa7223b",
+      "actual": "41de335582ca8f91078f44bf68bfc3802c44f1d26fcdbc70054a8ea81fa7223b",
+      "match": true
+    },
+    {
+      "name": "prior-log:frozen_contract",
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/frozen_contract.log",
+      "expected": "5dd3e5c1ba8ca41ae805367e8b8cfb06d096a41099086c13c01f1507566c2581",
+      "actual": "5dd3e5c1ba8ca41ae805367e8b8cfb06d096a41099086c13c01f1507566c2581",
+      "match": true
+    },
+    {
+      "name": "prior-log:whitespace",
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/whitespace.log",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "name": "prior-log:original_model_unchanged",
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/original_model_unchanged.log",
+      "expected": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "match": true
+    },
+    {
+      "name": "prior-log:proc_research_calibration_run_help",
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_calibration_run_help.log",
+      "expected": "33b0ce7384339f984e0a2f93a3f1ebd06e524842d21e46af5c42f0e9138d7fc9",
+      "actual": "33b0ce7384339f984e0a2f93a3f1ebd06e524842d21e46af5c42f0e9138d7fc9",
+      "match": true
+    },
+    {
+      "name": "prior-log:proc_research_evaluate_help",
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_evaluate_help.log",
+      "expected": "ed40ca1d5891e4d1dba9628eb161587d85ce9460e0fb9970a9d1c02e405d7a8b",
+      "actual": "ed40ca1d5891e4d1dba9628eb161587d85ce9460e0fb9970a9d1c02e405d7a8b",
+      "match": true
+    },
+    {
+      "name": "prior-log:proc_research_report_help",
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_report_help.log",
+      "expected": "bdbafdaf156b1affe7499f3edc1d923ad5b3b84737e3b6dd19774531f83e2195",
+      "actual": "bdbafdaf156b1affe7499f3edc1d923ad5b3b84737e3b6dd19774531f83e2195",
+      "match": true
+    },
+    {
+      "name": "prior-log:proc_research_prepare_help",
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_prepare_help.log",
+      "expected": "ff69ae99569fc6dc8f2369a36de53ccae90fa5845223281df7daa6ccde6d6774",
+      "actual": "ff69ae99569fc6dc8f2369a36de53ccae90fa5845223281df7daa6ccde6d6774",
+      "match": true
+    },
+    {
+      "name": "prior-log:proc_research_audit_help",
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_audit_help.log",
+      "expected": "5ad57e5164baa58dc52c5110d5b7f46edf41bddd934db530b48f2a7079d7c79f",
+      "actual": "5ad57e5164baa58dc52c5110d5b7f46edf41bddd934db530b48f2a7079d7c79f",
+      "match": true
+    },
+    {
+      "name": "prior-log:proc_research_launch_help",
+      "path": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/cpu-transfer-v2/proc_research_launch_help.log",
+      "expected": "a7daee8cace0fe3ba64c51e4709180a1a4d43bed4a81ad524c9adcc458fd77bd",
+      "actual": "a7daee8cace0fe3ba64c51e4709180a1a4d43bed4a81ad524c9adcc458fd77bd",
+      "match": true
+    },
+    {
+      "name": "requirements",
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/requirements.txt",
+      "expected": "027da4108d4aceaf6b4e25ef95499cbe2abcf274b5d7e6ee4d837b5a3c1fd5cb",
+      "actual": "027da4108d4aceaf6b4e25ef95499cbe2abcf274b5d7e6ee4d837b5a3c1fd5cb",
+      "match": true
+    },
+    {
+      "name": "config",
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/research/p01/config.json",
+      "expected": "73f79700a36f20d6741a0550e2aeb637973ba9b50b71ac857c8f15a41743ce23",
+      "actual": "73f79700a36f20d6741a0550e2aeb637973ba9b50b71ac857c8f15a41743ce23",
+      "match": true
+    },
+    {
+      "name": "METHOD",
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/METHOD.md",
+      "expected": "3d1a8ef6a4b98917c8dfc9fe778179093958e773544457ab12514659396a44b0",
+      "actual": "3d1a8ef6a4b98917c8dfc9fe778179093958e773544457ab12514659396a44b0",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-build-v1.log",
+      "expected": "b7152ea33cc4f550a21ebea72cb5c352d7900645d49a4f0dd011f86da5bbefb6",
+      "actual": "b7152ea33cc4f550a21ebea72cb5c352d7900645d49a4f0dd011f86da5bbefb6",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-coverage-red.log",
+      "expected": "9087d471e0627a89a0ee9b63c068e45896b18770f0a522043b454721164455cf",
+      "actual": "9087d471e0627a89a0ee9b63c068e45896b18770f0a522043b454721164455cf",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-existing-data-red.log",
+      "expected": "e89db1d4d71199e10df965a9c69e44dfcb6603fb12102715ec41290e93c2b530",
+      "actual": "e89db1d4d71199e10df965a9c69e44dfcb6603fb12102715ec41290e93c2b530",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-final-v1.log",
+      "expected": "9a9e8bc18df10ea9a6e4bedbe6018a83c68b5060094976e3feabca81859becb8",
+      "actual": "9a9e8bc18df10ea9a6e4bedbe6018a83c68b5060094976e3feabca81859becb8",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-final-v2.log",
+      "expected": "d219718c4b343794ece0642a7cebaf0db1cc940112452c233de8f48a56bdafa3",
+      "actual": "d219718c4b343794ece0642a7cebaf0db1cc940112452c233de8f48a56bdafa3",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-final-v3.log",
+      "expected": "1dbc4b451d68c655e42325b5fc4a85f6b935e505d04d545a736d2242c11a2881",
+      "actual": "1dbc4b451d68c655e42325b5fc4a85f6b935e505d04d545a736d2242c11a2881",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-final-v4.log",
+      "expected": "ff6c77321c21dc2e7d0771adc9d2d97310eef58caf26768367a8d6e24cdc4291",
+      "actual": "ff6c77321c21dc2e7d0771adc9d2d97310eef58caf26768367a8d6e24cdc4291",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-green-v1.log",
+      "expected": "9f1cb26098937ee4ec7c9816927534a07cb2f58349b979e7fdc2dd855700e3b1",
+      "actual": "9f1cb26098937ee4ec7c9816927534a07cb2f58349b979e7fdc2dd855700e3b1",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-green-v2.log",
+      "expected": "338c57c1b4c6b66c4fe7641d203b68c788720f8b743c030094fb6f13591e981e",
+      "actual": "338c57c1b4c6b66c4fe7641d203b68c788720f8b743c030094fb6f13591e981e",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-parent-red.log",
+      "expected": "9707a52c43115d229eb748c4ab4fac934c8d03d45f80ac2cc3ef10f3ca59832a",
+      "actual": "9707a52c43115d229eb748c4ab4fac934c8d03d45f80ac2cc3ef10f3ca59832a",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-red.log",
+      "expected": "e84594c4053bcd1935508bc08872ef36455ddf8aa37538eb4ea0539621fb1713",
+      "actual": "e84594c4053bcd1935508bc08872ef36455ddf8aa37538eb4ea0539621fb1713",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-review-red.log",
+      "expected": "47f4ad0698176721def0b89424f9937951ebe92cbe563aed73e2e33379e7577d",
+      "actual": "47f4ad0698176721def0b89424f9937951ebe92cbe563aed73e2e33379e7577d",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-stage1.log",
+      "expected": "913131651a8546513b0604dafd4c47aec76cb6ebd69924389bb8bd6c7a7586a2",
+      "actual": "913131651a8546513b0604dafd4c47aec76cb6ebd69924389bb8bd6c7a7586a2",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/weight-only-v1.log",
+      "expected": "03b58f0d8aa34b79e93e7435e815037bc76408b3fb207f94c6ed3594c98e8150",
+      "actual": "03b58f0d8aa34b79e93e7435e815037bc76408b3fb207f94c6ed3594c98e8150",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/transfer/remote-compare-v1/local.json",
+      "expected": "498d3bbd13d85c0549bbbcfbaeefa0105b8a669fc64930c867642a5b2c4a0b67",
+      "actual": "498d3bbd13d85c0549bbbcfbaeefa0105b8a669fc64930c867642a5b2c4a0b67",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/transfer/remote-compare-v1/remote.json",
+      "expected": "c6753ca1164adae626ea4a74b8a0e9ba059677091cca77e7f35c47b5a3591f81",
+      "actual": "c6753ca1164adae626ea4a74b8a0e9ba059677091cca77e7f35c47b5a3591f81",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/transfer/remote-compare-v1/expected.json",
+      "expected": "725135e372100ab2e85a7058005f816f5d572c7374d8d7bba48282f8035d6b55",
+      "actual": "725135e372100ab2e85a7058005f816f5d572c7374d8d7bba48282f8035d6b55",
+      "match": true
+    },
+    {
+      "name": "asset-evidence",
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/transfer/remote-compare-v1/command.json",
+      "expected": "d341101ed811c6dea07202e8a6b381b99b847ba94b31a1e694ed6be0f9554f71",
+      "actual": "d341101ed811c6dea07202e8a6b381b99b847ba94b31a1e694ed6be0f9554f71",
+      "match": true
+    },
+    {
+      "name": "asset-delivery",
+      "path": "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/research/p01/asset-transfer/delivery-verification.json",
+      "expected": "fd404f8a68e5ea3b64ebc035a805836fc810734927a27dcbbf68539265a8b668",
+      "actual": "fd404f8a68e5ea3b64ebc035a805836fc810734927a27dcbbf68539265a8b668",
+      "match": true
+    }
+  ],
+  "passed": 40,
+  "failed": 0,
+  "full_suites_rerun": false,
+  "large_assets_rehashed": false
+}

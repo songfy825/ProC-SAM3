@@ -2,7 +2,9 @@
 
 Research status: **PENDING / 证据不足**. No real P01 model inference, G0, pilot or confirmation has been executed in this round. There is no measured accuracy gain, loss, online latency or VRAM claim. The research hypothesis is neither supported nor refuted by CPU synthetic tests.
 
-Engineering status: **本轮工程目标 COMPLETE. CPU implementation, 60 tests (no skips), independent review and transfer preparation PASS.** The original 50-test delivery is preserved; the transfer follow-up adds 10 tests, portable paths, a stage launcher, pinned requirements and explicit recovery. All specified controls, frozen method contracts, negative audits and reviewer fixes remain in the branch. See PROGRESS.md and `research/p01/evidence/transfer-verification.json` for final acceptance.
+Latest strict engineering assessment: **REQUEST_CHANGES** after the user-requested Astra Ultra review of commit `ba663c4` on 2026-10-30. The method is conditionally acceptable, but the complete engineering contract is not yet signed off: F1 prediction disk-reserve protection and F2 exact report/bank receipt binding need local fixes and targeted CPU re-review. No P0/P1 defect was confirmed; F3 dataset-policy validation is a nonblocking P3. No implementation was changed during review. See `research/p01/reviews/2026-10-30-astra-ultra/REVIEW.md`.
+
+Historical engineering delivery: **60 CPU tests (no skips), prior independent review and transfer preparation PASS.** The original 50-test delivery and subsequent transfer acceptance remain valid evidence of what was tested; they do not cover the newly reproduced gaps. See PROGRESS.md and `research/p01/evidence/transfer-verification.json`. GPU and research status remain PENDING.
 
 Scientific blockers for the later phase:
 

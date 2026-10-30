@@ -1,0 +1,35 @@
+[
+  {
+    "status": "fulfilled",
+    "value": {
+      "key": "missing_scene_map",
+      "chunk_id": "2c5842",
+      "wall_time_seconds": 0.000040887,
+      "exit_code": 2,
+      "original_token_count": 34,
+      "output": "Missing reviewed source-scene map: /tmp/p01-astra-ultra-review-deliberately-missing-scene-map.json. No split or experiment was started.\n"
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "key": "gpu_guard",
+      "chunk_id": "3ad2e0",
+      "wall_time_seconds": 0.000023306,
+      "original_token_count": 179,
+      "output": "Traceback (most recent call last):\n  File \"<frozen runpy>\", line 198, in _run_module_as_main\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3/proc_research/launch.py\", line 207, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3/proc_research/launch.py\", line 166, in main\n    authorize(args.stage,args.allow_gpu,args.pilot_reviewed)\n  File \"/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3/proc_research/launch.py\", line 19, in authorize\n    raise PermissionError('GPU stage requires P01_ENABLE_GPU=1 and --allow-gpu')\nPermissionError: GPU stage requires P01_ENABLE_GPU=1 and --allow-gpu\n",
+      "exit_code": 1
+    }
+  },
+  {
+    "status": "fulfilled",
+    "value": {
+      "key": "arithmetic",
+      "chunk_id": "dc0d7b",
+      "wall_time_seconds": 0.040952783,
+      "exit_code": 0,
+      "original_token_count": 126,
+      "output": "{\n  \"t1008_old\": [\n    3.4989964963434126,\n    2.9528422311219673\n  ],\n  \"peak_fp32_ratio\": 5.063657407407407,\n  \"ranges_minutes\": {\n    \"360\": {\n      \"titan\": [\n        26.07618152350591,\n        41.72189043760945\n      ],\n      \"4090_ideal\": [\n        5.14967333401351,\n        8.239477334421615\n      ]\n    },\n    \"600\": {\n      \"titan\": [\n        42.20577834216936,\n        67.52924534747098\n      ],\n      \"4090_ideal\": [\n        8.335038282887846,\n        13.336061252620555\n      ]\n    }\n  }\n}\n"
+    }
+  }
+]

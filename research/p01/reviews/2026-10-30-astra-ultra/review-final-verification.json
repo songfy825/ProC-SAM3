@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "scope": "Review artifact consistency only; no new model or historical full-suite run",
+  "head": "ba663c4bfe65c047932aaf0271d6ca27503b4c50",
+  "git_status_at_check": "",
+  "sha256": {
+    "REVIEW.md": "bbf4370c1e900595f0f7a0b3e44126ccaf0417369278968feb0f1f4aa688c513",
+    "reproduce_cpu.py": "bb6ffd58443dc5c571a5d99041132cfac745d5f756287e2d36c0af06cd907d69",
+    "cpu-probe-results.json": "7bf5f6179b20eb18bdf4a6e69f5fbeddbc884068aca2061b4e35054ae78d2ab4",
+    "cpu-probes.log": "b7a9dc6eeb4f255e51b8000860f7627a5d632cb32ba5b0fd9d287051a78a4739",
+    "boundary-checks.json": "ad42ebffbc8bcf5bd44cd54fc73a8280aecf46aaeaec0f4ad93548a5d531b9dc",
+    "provenance.json": "7489c10fb6e5ae58511b17a635a67d865803efaff61a3b3318ec0cdfff16ebda"
+  }
+}

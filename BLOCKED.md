@@ -1,6 +1,6 @@
 # BLOCKED
 
-Engineering: **无 / no active blocker**. Original implementation and the Ubuntu transfer follow-up are complete; final transfer acceptance passed 60 CPU tests and independent review. The user has authorized pushing the task branch to `songfy825/ProC-SAM3`; no merge is requested. Transfer receipts are in `research/p01/evidence/transfer-*`.
+Engineering: **REQUEST_CHANGES after the 2026-10-30 Astra Ultra strict review**. Two confirmed P2 gaps remain: CPU prediction writes lack the 20 GiB reserve gate (F1), and report generation does not require the exact bank receipt used by its predictions (F2). The prior 60-test CPU acceptance and 15-test migration evidence remain valid historical results; they did not cover these cases. No implementation was changed in this review. See `research/p01/reviews/2026-10-30-astra-ultra/REVIEW.md`. The user has authorized pushing this task branch to `songfy825/ProC-SAM3`; no merge is requested.
 
 Research gates PENDING by explicit user instruction: no GPU work this round. The initial audit recorded nvidia-smi exit 9; this is historical, not a current availability claim. This transfer follow-up did not probe GPU availability, run inference or allocate CUDA memory. Do not queue or wait for GPU availability.
 

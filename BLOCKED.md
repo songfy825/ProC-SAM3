@@ -1,6 +1,6 @@
 # BLOCKED
 
-Engineering: **REQUEST_CHANGES after the 2026-10-30 Astra Ultra strict review**. Two confirmed P2 gaps remain: CPU prediction writes lack the 20 GiB reserve gate (F1), and report generation does not require the exact bank receipt used by its predictions (F2). The prior 60-test CPU acceptance and 15-test migration evidence remain valid historical results; they did not cover these cases. No implementation was changed in this review. See `research/p01/reviews/2026-10-30-astra-ultra/REVIEW.md`. The user has authorized pushing this task branch to `songfy825/ProC-SAM3`; no merge is requested.
+Engineering: **P2 fixes implemented; Astra Ultra re-review PENDING**. F1 prediction capacity checks and F2 report bank binding now have RED→GREEN regressions, and full CPU acceptance `cpu-p2-v1` passed 70 tests without skips. Strict sign-off and push await the requested independent re-review. The original findings and prior evidence are preserved in `research/p01/reviews/2026-10-30-astra-ultra/REVIEW.md`; repair evidence is in `research/p01/p2-fixes/evidence/`. F3 dataset-set validation remains a documented nonblocking P3, outside the requested two fixes.
 
 Research gates PENDING by explicit user instruction: no GPU work this round. The initial audit recorded nvidia-smi exit 9; this is historical, not a current availability claim. This transfer follow-up did not probe GPU availability, run inference or allocate CUDA memory. Do not queue or wait for GPU availability.
 

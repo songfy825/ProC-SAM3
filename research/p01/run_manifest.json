@@ -26,6 +26,17 @@
       "code_sha256": "ca1816ca8606689c2f4077851d89819758b38dead540c6be86807563659eb9a3",
       "config_sha256": "73f79700a36f20d6741a0550e2aeb637973ba9b50b71ac857c8f15a41743ce23",
       "method_sha256": "3d1a8ef6a4b98917c8dfc9fe778179093958e773544457ab12514659396a44b0"
+    },
+    {
+      "run_id": "cpu-p2-v1",
+      "kind": "CPU_SYNTHETIC_ACCEPTANCE",
+      "status": "PASS",
+      "tests": 70,
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-p2-v1",
+      "verification_sha256": "0e0b19a7b107e0e969d8145690e76d490dc857ca3a4af030cd66056239ae7098",
+      "code_sha256": "df52a7636ed6fb0de5a613ceea513c68632fdcca7f61c8d415ce900d45caab59",
+      "config_sha256": "73f79700a36f20d6741a0550e2aeb637973ba9b50b71ac857c8f15a41743ce23",
+      "method_sha256": "3d1a8ef6a4b98917c8dfc9fe778179093958e773544457ab12514659396a44b0"
     }
   ],
   "assets_initial_sha256": "dff4e04342f0091d65f59997bc42c8871ac073632f5dc986a4f8d63878560100",
@@ -39,7 +50,7 @@
   "source_scene_map": "PENDING external provenance evidence",
   "local_commit": "Implementation commit above; final HEAD also contains the documentation-only delivery receipt",
   "implementation_commit": "e28c65b15321008c6964fc84bdabec4355b7c8ae",
-  "engineering_status": "REQUEST_CHANGES_AFTER_ASTRA_ULTRA_REVIEW",
+  "engineering_status": "CPU_PASS_AWAITING_ASTRA_ULTRA_REREVIEW",
   "strict_review": {
     "run_id": "astra-ultra-review-v1",
     "reviewed_commit": "ba663c4bfe65c047932aaf0271d6ca27503b4c50",
@@ -51,8 +62,13 @@
     "engineering": "REQUEST_CHANGES",
     "real_run_readiness": "NOT_READY",
     "research": "PENDING",
-    "confirmed_P2": ["F1_prediction_disk_reserve", "F2_report_exact_bank_binding"],
-    "confirmed_P3": ["F3_dataset_policy_validation"],
+    "confirmed_P2": [
+      "F1_prediction_disk_reserve",
+      "F2_report_exact_bank_binding"
+    ],
+    "confirmed_P3": [
+      "F3_dataset_policy_validation"
+    ],
     "implementation_changed": false,
     "historical_hash_checks_passed": 40,
     "new_cpu_probe_exit_code": 0,
@@ -84,5 +100,18 @@
     "CPU_transfer_tests": 15,
     "production_code_changed": false,
     "real_GPU": "PENDING"
+  },
+  "p2_repairs": {
+    "base_commit": "e8e07cb7859fc4130d2ffddcb9c386bdd558721d",
+    "scope": [
+      "F1_prediction_disk_reserve",
+      "F2_report_exact_bank_binding"
+    ],
+    "CPU_acceptance": "cpu-p2-v1",
+    "regression_tests": 10,
+    "review": "PENDING",
+    "push": "PENDING review PASS",
+    "F3": "nonblocking P3 retained; not changed",
+    "GPU": "PENDING; not run"
   }
 }

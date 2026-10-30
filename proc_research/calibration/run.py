@@ -265,6 +265,27 @@ def fit_stage(args):
     finish(run,{'kind':'calibration_banks'})
 
 
+def prediction_budget(cache_run, entries, datasets):
+    """Budget int64 NPY outputs from receipt-verified original-grid metadata.
+
+    Keep 64 KiB per file for its header/allocation and additional index/receipt
+    headroom. No score arrays or model are needed for the initial disk gate.
+    """
+    shapes={}
+    for entry in entries:
+        if entry['dataset'] not in datasets:continue
+        key=(entry['dataset'],entry['image_id'])
+        meta=json.loads((Path(cache_run)/entry['path']/'meta.json').read_text())
+        shape=tuple(meta['geometry']['original_hw'])
+        if len(shape)!=2 or any(type(n) is not int or n<=0 for n in shape):
+            raise ValueError('invalid prediction grid in cache metadata')
+        if key in shapes and shapes[key]!=shape:raise ValueError('view grids differ')
+        shapes[key]=shape
+    metadata_bytes=1024**2+len(shapes)*65536
+    payload=sum((h*w*8+65536)*len(METHODS) for h,w in shapes.values())
+    return payload+metadata_bytes,metadata_bytes
+
+
 def decode_stage(args):
     upstream,entries=_cache_entries(args.cache_run);bank_manifest,_=_receipt(args.bank_run)
     _same_experiment(upstream['identity'],bank_manifest['identity'])
@@ -274,6 +295,8 @@ def decode_stage(args):
     ident=dict(upstream['identity'],stage='decode',evaluated_split=upstream['identity']['stage'],
         cache_receipt_sha256=sha256(Path(args.cache_run)/'complete.json'),
         bank_receipt_sha256=sha256(Path(args.bank_run)/'complete.json'))
+    remaining_bytes,metadata_bytes=prediction_budget(args.cache_run,entries,ident['config']['datasets'])
+    ensure_capacity(args.output,remaining_bytes)
     run=create_run(args.output,args.run_id,ident)
     bank_index=json.loads((Path(args.bank_run)/'bank_index.json').read_text())
     predictions=[];stats=[];io_time=0;decode_time=0
@@ -281,6 +304,7 @@ def decode_stage(args):
         banks={name:load_bank(Path(args.bank_run)/dataset/name,receipt) for name,receipt in bank_index[dataset].items()}
         items=[e for e in entries if e['dataset']==dataset];keys=_keys(items)
         shuffled={seed:shuffle_conditions(keys,seed) for seed in (0,1,2)}
+        ensure_capacity(run,remaining_bytes)
         write_json(run/f'shuffle_application_{dataset}.json',{'keys':[list(k.key) for k in keys],'assignments':shuffled})
         grouped={}
         for i,e in enumerate(items):grouped.setdefault(e['image_id'],[]).append((i,e))
@@ -309,11 +333,18 @@ def decode_stage(args):
                 stats.append(dict(dataset=dataset,image_id=image_id,method=method,**s))
             decode_time+=time.perf_counter()-start
             for method,labels in results.items():
-                path=run/'predictions'/dataset/method/(digest(image_id)+'.npy');path.parent.mkdir(parents=True,exist_ok=True)
-                np.save(path,labels.numpy(),allow_pickle=False)
+                path=run/'predictions'/dataset/method/(digest(image_id)+'.npy')
+                array=labels.numpy()
+                # Recheck every write: a successful preflight is not a reservation
+                # against other jobs consuming disk while CPU decode is running.
+                ensure_capacity(path,max(remaining_bytes,array.nbytes+65536+metadata_bytes))
+                path.parent.mkdir(parents=True,exist_ok=True)
+                np.save(path,array,allow_pickle=False)
+                remaining_bytes-=array.nbytes+65536
                 predictions.append(dict(dataset=dataset,image_id=image_id,scene_id=first.scene_id,
                     method=method,split=ident['evaluated_split'],num_classes=len(first.class_ids),
                     path=str(path.resolve()),sha256=sha256(path)))
+    ensure_capacity(run,metadata_bytes)
     write_json(run/'prediction_index.json',{'identity':ident,'predictions':predictions})
     write_json(run/'fallback.json',stats)
     write_json(run/'resources.json',{'cache_read_seconds':io_time,'cpu_decode_seconds':decode_time,

@@ -1,0 +1,21 @@
+{
+  "command": [
+    "bash",
+    "scripts/p01/python.sh",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/research",
+    "-p",
+    "test_p2_regressions.py",
+    "-k",
+    "decode",
+    "-k",
+    "space",
+    "-v"
+  ],
+  "exit_code": 0,
+  "seconds": 8.777481477009133,
+  "log_sha256": "c5ce7d5fe4d6719d70cbe9c38686ee32af5c7aa1cff4b7ce2ed70f28f77636f8"
+}

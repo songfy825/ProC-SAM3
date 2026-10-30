@@ -7,13 +7,19 @@ import random
 import numpy as np
 from .cache import sha256,write_json
 from .statistics import paired_bootstrap
-from .calibration.run import _receipt,_same_experiment,METHODS
+from .calibration.run import _receipt,_same_experiment,validate_bank_binding,METHODS
 
 
 def build_report(prediction_run,evaluation_dir,bank_run,output):
     pred=Path(prediction_run);ev=Path(evaluation_dir);banks=Path(bank_run)
-    manifest,_=_receipt(pred);bank_manifest,_=_receipt(banks)
+    manifest,_=_receipt(pred);bank_manifest,bank_receipt=_receipt(banks)
     _same_experiment(manifest['identity'],bank_manifest['identity'])
+    if bank_manifest['identity'].get('stage')!='fit' or bank_receipt.get('kind')!='calibration_banks':
+        raise ValueError('report requires a fit-stage calibration bank receipt')
+    bank_hash=sha256(banks/'complete.json')
+    if manifest['identity'].get('bank_receipt_sha256')!=bank_hash:
+        raise ValueError('report must use the exact calibration bank that produced predictions')
+    validate_bank_binding(dict(manifest['identity'],stage=manifest['identity'].get('evaluated_split')),bank_hash)
     provenance=json.loads((ev/'provenance.json').read_text())
     if provenance['prediction_index_sha256']!=sha256(pred/'prediction_index.json'):
         raise ValueError('evaluation belongs to a different prediction run')
@@ -81,7 +87,7 @@ def build_report(prediction_run,evaluation_dir,bank_run,output):
         'Released prompt-pool construction leakage and geographic independence are not proven. CPU synthetic results cannot establish model behavior or P01 gains.']
     (p/'decision.md').write_text('\n'.join(lines)+'\n')
     write_json(p/'provenance.json',{'prediction_receipt_sha256':sha256(pred/'complete.json'),
-        'bank_receipt_sha256':sha256(banks/'complete.json'),'evaluation_provenance_sha256':sha256(ev/'provenance.json')})
+        'bank_receipt_sha256':bank_hash,'evaluation_provenance_sha256':sha256(ev/'provenance.json')})
     return report
 
 

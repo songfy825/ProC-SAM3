@@ -1,0 +1,14 @@
+{
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/p2-fixes-v1/red.log": {
+    "sha256": "338a07e40756ecef6a471f8cc74f049666c640ee5c4a9b64ee62a850d30c4c8b",
+    "bytes": 7501
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/p2-fixes-v1/f1-green.log": {
+    "sha256": "c5ce7d5fe4d6719d70cbe9c38686ee32af5c7aa1cff4b7ce2ed70f28f77636f8",
+    "bytes": 837
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/p2-fixes-v1/green.log": {
+    "sha256": "b6e5597847e32ca68bb9333342fa4524604e9021091b21044e1227708642873f",
+    "bytes": 1602
+  }
+}

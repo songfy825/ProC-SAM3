@@ -1,0 +1,19 @@
+{
+  "command": [
+    "bash",
+    "scripts/p01/python.sh",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/research",
+    "-p",
+    "test_p2_regressions.py",
+    "-v"
+  ],
+  "exit_code": 1,
+  "seconds": 41.02486370399129,
+  "test_sha256": "33a36d9a6365d83114d81560ab6168cd57e1b200554af420749b45dabb5884f4",
+  "log_sha256": "338a07e40756ecef6a471f8cc74f049666c640ee5c4a9b64ee62a850d30c4c8b",
+  "gpu_enabled": false
+}

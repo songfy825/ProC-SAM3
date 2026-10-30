@@ -9,6 +9,6 @@ Scope: repair Astra Ultra F1/F2, CPU regressions, Astra Ultra re-review, then pu
 - [x] Targeted GREEN and full acceptance `cpu-p2-v1`: 70 tests, no skips, all negative/restored checks and six CLI helps PASS, overall exit 0. RED evidence and frozen assertions retained.
 - [x] Independent `gpt-6-astra` / `ultra` re-review PASS on `4013778`: F1/F2 CLOSED, six additional CPU boundary probes PASS; F3 stays nonblocking P3, no new blocking findings.
 - [x] Update PROGRESS/BLOCKED/decision/run manifest and hash catalogs; implementation committed as `4013778`, final evidence receipt commit follows.
-- [ ] Push only to `fork` after review PASS and verify remote SHA; publication receipt is recorded outside Git at runtime/p01/audit/p2-fixes-v1/delivery.json.
+- [x] After review PASS, pushed only to `fork`; `ls-remote` confirmed delivery commit `918de4bd6af03447be9f6e7db36096638e89114b`. A subsequent documentation-only publication receipt records completion; final remote verification is retained at runtime/p01/audit/p2-fixes-v1/delivery.json.
 
 Acceptance: low total space and later space loss reject before the affected predictions; sufficient space produces identical outputs; fresh CPU retry retains previous evidence and reuses upstream cache. Report A/A succeeds; A/B, missing binding, invalid bank stage/kind and confirmation seal mismatch fail before creating a report. No research/GPU PASS inferred.

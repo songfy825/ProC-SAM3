@@ -6,6 +6,7 @@ Follow the user's latest task and scope. These notes describe the current P02 ch
 
 - Check `git status --short`, branch, and HEAD before editing. The P02 branch is `codex/p02-mask-action-space` in `songfy825/ProC-SAM3`; preserve unrelated local changes.
 - Read `research/p02/REMOTE_RUN.md`, `research/p02/README.md`, `research/p02/METHOD.md`, and `research/p02/input.PROVENANCE.md` for current operation and input contracts.
+- Read `research/p02/migration/REPORT.md` and `research/p02/migration/run_manifest.json` for the portable-path implementation, independent clone verification, and publication evidence.
 - Read `research/p02/REPORT.md`, `research/p02/PROGRESS.md`, `research/p02/BLOCKED.md`, and `research/p02/run_manifest.json` for historical evidence and limitations. Their old paths, local-only commit statements, and test counts describe that historical run; inspect current Git state and new verification receipts for current status.
 
 ## Current implementation

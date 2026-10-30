@@ -1,0 +1,372 @@
+{
+  "REAL_ACTION_SPACE": "PENDING",
+  "base_commit": "ec7f57ef2a3ec5cb166149a2fa85f5eff4a2f566",
+  "commands": [
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/cpu_tests.py",
+        "--suite",
+        "p01"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/p01_contracts.log",
+      "log_sha256": "4b31b86d2e206c66bcd1495628c635c129e3da1d7a07067d126660e1e1fc3737",
+      "name": "p01_contracts",
+      "passed": true,
+      "seconds": 47.556079408037476,
+      "tests": 60
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/cpu_tests.py",
+        "--suite",
+        "p02"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/p02_contracts.log",
+      "log_sha256": "adb4b11fb0ba10f3e8e7d43c005a3b40017fe551096bc620f1271746a431bff3",
+      "name": "p02_contracts",
+      "passed": true,
+      "seconds": 18.017666429048404,
+      "tests": 78
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/analyze.py",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/analyze_help.log",
+      "log_sha256": "eb7e7f397708d625e4150bd2489cc8bf3792b8266a3d2a11df2aae1c2b572a57",
+      "name": "analyze_help",
+      "passed": true,
+      "seconds": 0.12771425594110042
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/analyze.py",
+        "--nonexistent-option"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/analyze_usage_failure.log",
+      "log_sha256": "5b58a56cc577cf014d6e2c6cd205d20e9f555f4250b153ead1f9048b4a82405b",
+      "name": "analyze_usage_failure",
+      "passed": true,
+      "seconds": 0.13477085495833308
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/verify.py",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/verify_help.log",
+      "log_sha256": "02352f5770ead4b5b488d0554a82727ba207a89265f06981f41db2a4966d0fee",
+      "name": "verify_help",
+      "passed": true,
+      "seconds": 0.1595362121006474
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/verify.py",
+        "--nonexistent-option"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/verify_usage_failure.log",
+      "log_sha256": "10b721dee9d1861098f08dac2bd3b4786a1c4d5c0177dda4529b52ebe4437265",
+      "name": "verify_usage_failure",
+      "passed": true,
+      "seconds": 0.1281283909920603
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/analyze.py",
+        "--manifest",
+        "research/p02/input.real.template.json",
+        "--output",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/real-pending"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/real_missing_pending.log",
+      "log_sha256": "39bdf666c1135ec0509f61aa002a99337d77e3afc3d3d85dbe372d728648a9f5",
+      "name": "real_missing_pending",
+      "passed": true,
+      "seconds": 3.582168382941745,
+      "status_contract": true
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/analyze.py",
+        "--manifest",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-input.json",
+        "--output",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-no-gt"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-no-gt.log",
+      "log_sha256": "d2ca25e16d33b98aeb4a56c2eac1eec62f430905f5a38cb0ec94f7858163bff9",
+      "name": "synthetic-no-gt",
+      "passed": true,
+      "seconds": 3.9547457540174946,
+      "status_contract": true
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/analyze.py",
+        "--manifest",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-input.json",
+        "--output",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-gt-0",
+        "--labels",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-labels.jsonl"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-gt-0.log",
+      "log_sha256": "d2ca25e16d33b98aeb4a56c2eac1eec62f430905f5a38cb0ec94f7858163bff9",
+      "name": "synthetic-gt-0",
+      "passed": true,
+      "seconds": 3.907621804974042,
+      "status_contract": true
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/analyze.py",
+        "--manifest",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-input.json",
+        "--output",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-gt-1",
+        "--labels",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-labels.jsonl"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-gt-1.log",
+      "log_sha256": "d2ca25e16d33b98aeb4a56c2eac1eec62f430905f5a38cb0ec94f7858163bff9",
+      "name": "synthetic-gt-1",
+      "passed": true,
+      "seconds": 3.6668737230356783,
+      "status_contract": true
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/analyze.py",
+        "--manifest",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-input.json",
+        "--output",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-gt-deleted",
+        "--labels",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-labels.jsonl"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-gt-deleted.log",
+      "log_sha256": "d2ca25e16d33b98aeb4a56c2eac1eec62f430905f5a38cb0ec94f7858163bff9",
+      "name": "synthetic-gt-deleted",
+      "passed": true,
+      "seconds": 3.8785259008873254,
+      "status_contract": true
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/analyze.py",
+        "--manifest",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-input.json",
+        "--output",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-corrupt-receipt"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 1,
+      "expected_exit": 1,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-corrupt-receipt.log",
+      "log_sha256": "e3a0a41d31438d53096a7b3aad8b9c4252a6c170f2ddacb6ac30a5fc3e0af42b",
+      "name": "synthetic-corrupt-receipt",
+      "passed": true,
+      "seconds": 3.646227138931863,
+      "status_contract": true
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/analyze.py",
+        "--manifest",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-input.json",
+        "--output",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-restored"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-restored.log",
+      "log_sha256": "d2ca25e16d33b98aeb4a56c2eac1eec62f430905f5a38cb0ec94f7858163bff9",
+      "name": "synthetic-restored",
+      "passed": true,
+      "seconds": 3.725357529008761,
+      "status_contract": true
+    },
+    {
+      "command": [
+        "bash",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces/scripts/p02/python.sh",
+        "scripts/p02/analyze.py",
+        "--manifest",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-input.json",
+        "--output",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-cache-missing"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 2,
+      "expected_exit": 2,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-cache-missing.log",
+      "log_sha256": "c13e1a6d7dd42a1d8ca6e48a8cc11a4ad4ce0908439f024827f86c63fb987af1",
+      "name": "synthetic-cache-missing",
+      "passed": true,
+      "seconds": 3.7850336589617655,
+      "status_contract": true
+    },
+    {
+      "command": [
+        "sha256sum",
+        "-c",
+        "research/p01/evidence/contract-freeze.sha256"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/frozen_p01_contract.log",
+      "log_sha256": "5dd3e5c1ba8ca41ae805367e8b8cfb06d096a41099086c13c01f1507566c2581",
+      "name": "frozen_p01_contract",
+      "passed": true,
+      "seconds": 0.0052260319935157895
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "ec7f57ef2a3ec5cb166149a2fa85f5eff4a2f566",
+        "--",
+        "proc_research/cache.py",
+        "proc_research/evaluate.py",
+        "proc_research/baseline.py",
+        "proc_research/calibration",
+        "scripts/p01",
+        "tests/research",
+        "research/p01",
+        "sam3_segmentor_cached.py",
+        "core",
+        "sam3",
+        "configs",
+        "prompt_pools",
+        "METHOD.md",
+        "PROGRESS.md",
+        "BLOCKED.md"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/p01_original_unchanged.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "p01_original_unchanged",
+      "passed": true,
+      "seconds": 0.018666867050342262
+    },
+    {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated checkout with spaces",
+      "exit_code": 0,
+      "expected_exit": 0,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/whitespace.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "name": "whitespace",
+      "passed": true,
+      "seconds": 0.024505321984179318
+    }
+  ],
+  "gt_actions_byte_identical": true,
+  "input_hashes": {
+    "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/cache/synthetic-001/arrays.npz": "065cef0ca499e72b35aa60963895349c4194258dfe6d1072767a5d3c92adb069",
+    "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/cache/synthetic-001/meta.json": "6204d5f7ca919cdfacc21b583457fd6d3a387929bb45110c4752084bc3a476e0",
+    "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/cache/synthetic-001/receipt.json": "f4827bbd601733a21d4148985e8f5e27c17a9fd5c8b7105551893ce3be4f0583",
+    "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-development.jsonl": "b4e276a2b5993edb77e1351b92665077ac4ac032ed23afa506c42c7c9d39e9c2",
+    "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-index.json": "422d47ade5f46e3ffebe607468d4fbebdc075e6d520a8f7aefeca0b1ed5f0c9b",
+    "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-input.json": "7fb9fcada2e1c08f8ba0887749240b459e9bf645ce806fbaea61458391c5f1ae",
+    "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic-labels.jsonl": "60014a22678c68a6e175635a5bfd8d09d0d7207ee65511ea5fe7f1d05edd9620",
+    "/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/relocated runtime with spaces/audit/full-v1/synthetic-input/synthetic.png": "cbcde18f86434fdc363f48bd2cafc6843423b5a8689dd6a8b205ade4b3328290"
+  },
+  "kind": "CPU_SYNTHETIC_ENGINEERING_ONLY",
+  "method_sha256": "71799492c866227085f8bc46d8eede9b942c006ff424c5828ee1515689308595",
+  "runtime_policy": {
+    "api_calls": 0,
+    "availability_answer": "constant False by CPU policy, no driver query",
+    "hardware_probes": 0,
+    "model_inference_calls": 0,
+    "scope": "policy for this guarded process only; not a historical session audit"
+  },
+  "source_hashes": {
+    "proc_research/correction/__init__.py": "3efdaddd75a3947cd2e9e6cfb6f318eef5cf4cf608edb8734e6b4686c76e4c90",
+    "proc_research/correction/actions.py": "6cd3b07184be3e5572b012e8047a2136414f6c7197be947a99583970ce41d7fc",
+    "proc_research/correction/evaluation.py": "ccf11aec03cef7817db8c1058704590e7dfabadfb828efa29bd4b876190d918a",
+    "proc_research/correction/provenance.py": "b09262dffef0d7cd8923b58cc8178cba13844527f28916859a47512f56f063f4",
+    "proc_research/correction/runtime.py": "e91db8fcf927f5e389d70714b4e53c602ed37c122d30d439f0a7614e54c832dc",
+    "scripts/p02/analyze.py": "a064ad7c66da72e1139ba6b297e5a2b26c99956c752919e918e3a7c9eaacc32b",
+    "scripts/p02/cpu_tests.py": "bdd3a328416496c3b39b193300de90978244fd27a03062ac8c21fa9fbe27fd96",
+    "scripts/p02/python.sh": "4172f082c0633378a3516e679e13a19d9dac10ebebf690eccffbc5a77818a15b",
+    "scripts/p02/verify.py": "81f4ffa23147c65459ea26655a5dddcf7108e025473205ba87bcfecb8cc11296",
+    "tests/p02/test_actions.py": "83a7719d84063f82a1af76278860f62735634512735d019b7dd469f19f3e902d",
+    "tests/p02/test_cli.py": "c0cb76ceed7667f0bd33a0c2afea5abeede7b1969353df79ff76661bb4075dff",
+    "tests/p02/test_evaluation.py": "fdf288c3feeb724de370edfa3cbc263605d1799c8b496922fe80e35e2acf3085",
+    "tests/p02/test_portability.py": "4e10c7344f53bda33038412de5f277a993f6c97af2e7bd3f60d2f514d324b0df",
+    "tests/p02/test_provenance.py": "434e96364b19d8d0f8ef27799ee52449da5c01c12ffa6203fb49ac15ed913a45",
+    "tests/p02/test_runtime.py": "d8abec5c616512c2f47d0ab33dc41ab6913a02cc42005c207a37694b9cfb0850"
+  },
+  "status": "PASS"
+}

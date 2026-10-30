@@ -1,0 +1,7 @@
+remote:
+remote: Create a pull request for 'codex/p02-mask-action-space' on GitHub by visiting:
+remote:      https://github.com/songfy825/ProC-SAM3/pull/new/codex/p02-mask-action-space
+remote:
+To github.com:songfy825/ProC-SAM3.git
+ * [new branch]      HEAD -> codex/p02-mask-action-space
+分支 'codex/p02-mask-action-space' 设置为跟踪来自 'fork' 的远程分支 'codex/p02-mask-action-space'。

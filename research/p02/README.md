@@ -2,6 +2,8 @@
 
 P02 analyzes existing, independently evidenced 1008-view caches on CPU. It does not construct a model, produce GPU caches, download assets, or turn synthetic verification into a scientific result. Missing real evidence remains `REAL_ACTION_SPACE=PENDING`.
 
+The path migration and independent clone verification are recorded in [migration/REPORT.md](migration/REPORT.md), with source and relocated CPU receipts. This is local migration evidence, not a fresh target-machine installation result.
+
 For cloning the P02 branch on another machine, dependencies, path configuration, and Codex handoff, read [REMOTE_RUN.md](REMOTE_RUN.md). Run commands from the checkout root with a compatible Python environment already active:
 
 ```bash

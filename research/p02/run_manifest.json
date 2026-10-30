@@ -388,7 +388,8 @@
       "p02_contracts": 62
     }
   },
-  "local_commit": "See git log: implementation commit followed by documentation-only receipt if needed. No push/merge.",
+  "implementation_commit": "e858675ab0ad04853737c3b3b5547e8a7d99d7de",
+  "local_commit": "Implementation commit recorded above; subsequent receipt commit changes documentation only. No push/merge.",
   "log_catalog": [
     {
       "path": "/home/fengyi/CodeHome/Proc/runtime/p02/audit/acceptance-v1.log",

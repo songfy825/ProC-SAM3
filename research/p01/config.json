@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "enabled": false,
+  "datasets": ["LoveDA", "iSAID"],
+  "views": [1008, 504],
+  "compile": false,
+  "decoder_dtype": "fp32",
+  "encoder_dtype": "bf16",
+  "shuffle_seeds": [0, 1, 2],
+  "bootstrap_iterations": 2000,
+  "bootstrap_seed": 20261030,
+  "split_limits": {"calibration": 50, "pilot": 50, "confirmation": 200},
+  "reserve_gib": 20,
+  "calibration": {"core_high": 0.5, "core_low": 0.3, "min_pixels": 2000, "min_scenes": 5, "sigma": 0.15, "background": 0, "background_offset": 1.0, "probability_threshold": 0.1, "prior_mode": "quality"},
+  "methods": ["single_raw", "single_rms", "single_ecd", "multiscale_mean", "multiscale_rms", "multiscale_ecd_global", "multiscale_ecd_conditioned", "multiscale_ecd_uniform", "multiscale_ecd_shuffle0", "multiscale_ecd_shuffle1", "multiscale_ecd_shuffle2"],
+  "protected_classes": "all"
+}

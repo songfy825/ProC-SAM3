@@ -1,0 +1,135 @@
+{
+  "base_commit": "234c87e58fb08f02ba1cf163b2a73f5330d462e9",
+  "source_head": "742ce170e1686b51aab06f2afd22c93812cb06cb",
+  "source_status": "",
+  "weight": {
+    "path": "/home/fengyi/sam3.pt",
+    "bytes": 3450062241,
+    "sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e"
+  },
+  "assets": {
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/prompt_pools/cfg_vdd_expanded_prompt_pool_hybrid_strict.pkl": {
+      "bytes": 189,
+      "sha256": "223ee776e8d9f59c6420eea46ecd24667bd72697c3efb9ba3bcd7de9c4d51388"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/prompt_pools/cfg_vaihingen_expanded_prompt_pool_hybrid_strict.pkl": {
+      "bytes": 203,
+      "sha256": "e60b421b20d6e69fc1791728ee11d483936e4aafe50be7d319bd19b6dc8a0ff5"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/prompt_pools/cfg_udd5_expanded_prompt_pool_hybrid_strict.pkl": {
+      "bytes": 142,
+      "sha256": "683ec7c7bd2fa128a28e5142a6c61613cc063d450d923671c3c1c69595edabba"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/prompt_pools/cfg_uavid_expanded_prompt_pool_hybrid_strict.pkl": {
+      "bytes": 342,
+      "sha256": "6291b795335b957ac6713a5554b84956ac19858a57453718d1eb3ef94b696ddd"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/prompt_pools/cfg_potsdam_expanded_prompt_pool_hybrid_strict.pkl": {
+      "bytes": 160,
+      "sha256": "efe7b83ee9c39ac789b3c742fd0f4d80fd683e7138dedc6189ed49392d811bf4"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/prompt_pools/cfg_openearthmap_expanded_prompt_pool_hybrid_strict.pkl": {
+      "bytes": 380,
+      "sha256": "0e0446477236cb7c0aad3c507cf9f6abbac575a96c74cfac6a0a112ba7ac2398"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/prompt_pools/cfg_loveda_expanded_prompt_pool_hybrid_strict.pkl": {
+      "bytes": 396,
+      "sha256": "9c60ef6c64df630042554765854d1d70c84e2b98e7f579409ccebef098c135a7"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/prompt_pools/cfg_iSAID_expanded_prompt_pool_hybrid_strict.pkl": {
+      "bytes": 445,
+      "sha256": "46b8aae662e85331ecb4af4f762e68889d55c87c9ad4ca55fd6c42697434b5ed"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_vdd_exp.txt": {
+      "bytes": 105,
+      "sha256": "b0bf1b96fdadc2292d5b49e0b8678c668394baea6620f3c64a7e9ae173097b40"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_vdd.txt": {
+      "bytes": 52,
+      "sha256": "375233ff2811716b9977155d51fe7314b4d5768220a11a91bed1009cb37f414a"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_vaihingen_exp.txt": {
+      "bytes": 120,
+      "sha256": "0325245870bca2ccc249e23bbe3b8ab1901fcad9600f3604318582a0c8f2f619"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_vaihingen.txt": {
+      "bytes": 36,
+      "sha256": "9196423c8b5b880606868763c6ffb25fdc15c0dba18be72fcf178b15b9b8b14d"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_udd5_exp.txt": {
+      "bytes": 79,
+      "sha256": "f69ecdc38cdf09a55f151fd3a53a522dbe35a72496cd005e33c0e4525f2466a2"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_udd5.txt": {
+      "bytes": 43,
+      "sha256": "39c2b88a950e7531c480b5e9d092d0fc6cda89d3d0fb0bf8fdc9879207edcf16"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_uavid_exp.txt": {
+      "bytes": 234,
+      "sha256": "59760bfe9d9ac57f5a74b81a483f1382ad288d78718cd892616b52a982915d66"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_uavid.txt": {
+      "bytes": 50,
+      "sha256": "f33f1b914d5417dae1f8ebfdb410cb364e0fcc331a9f1444f59c3eac479ba2ff"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_potsdam_exp.txt": {
+      "bytes": 86,
+      "sha256": "3ffa556ae3b9880a4a71b87f461cd74b4f14585fc6e23ebe0d3e5f2a33ab322e"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_potsdam.txt": {
+      "bytes": 36,
+      "sha256": "9196423c8b5b880606868763c6ffb25fdc15c0dba18be72fcf178b15b9b8b14d"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_openearthmap_exp.txt": {
+      "bytes": 256,
+      "sha256": "2460e48cf914117cf3b48676403b0e1b74788766f48ababb49d0fb203519962a"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_openearthmap.txt": {
+      "bytes": 99,
+      "sha256": "42c1a32ea2dd5385167b9629118d75d28a37a6f4710b4b6de02a98bb97f1af47"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_loveda_exp.txt": {
+      "bytes": 283,
+      "sha256": "f7b8e638383e6f7187fce7f2d82e929fc004289a16dff01ca1064d763c68df59"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_loveda.txt": {
+      "bytes": 82,
+      "sha256": "877c2b7901bd5a539025211e13d849bf29ba868d549b905d30c74b071e3d04d9"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_iSAID_exp.txt": {
+      "bytes": 294,
+      "sha256": "aede79f0bd7ca88437c01ebb94df1bb155c47988e735a3715c7bdb4dc0fd8853"
+    },
+    "/home/fengyi/CodeHome/Proc/src/ProC-SAM3/configs/cls_iSAID.txt": {
+      "bytes": 194,
+      "sha256": "267ff1dceeca40c61038f08c67481f2bc9a9c134440c0a563dc2f58e5e5f74e8"
+    },
+    "/home/fengyi/CodeHome/ProC-SAM3-repro/manifests/LoveDA-inference.jsonl": {
+      "bytes": 338807,
+      "sha256": "c623908821374592cc03c139b4325be0fe5e7c35e8aaedd0ecf8192839c47eda"
+    },
+    "/home/fengyi/CodeHome/ProC-SAM3-repro/manifests/iSAID-inference.jsonl": {
+      "bytes": 2778406,
+      "sha256": "df3eefe571de9777a75fc697a5088b9ae4e1cc9b13441ee1db6f6ac1eec672bc"
+    }
+  },
+  "image_inventories": [
+    {
+      "dataset": "LoveDA",
+      "count": 1669,
+      "all_image_sha256_verified": true,
+      "manifest_sha256": "c623908821374592cc03c139b4325be0fe5e7c35e8aaedd0ecf8192839c47eda",
+      "scene_ids_verified": false
+    },
+    {
+      "dataset": "iSAID",
+      "count": 11644,
+      "all_image_sha256_verified": true,
+      "manifest_sha256": "df3eefe571de9777a75fc697a5088b9ae4e1cc9b13441ee1db6f6ac1eec672bc",
+      "scene_ids_verified": false
+    }
+  ],
+  "disk_free_bytes": 166652411904,
+  "GPU": "PENDING; nvidia-smi -L exit 9; no GPU compute authorized",
+  "prompt_pool_construction": "unknown; no proof of leakage-free construction"
+}

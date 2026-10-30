@@ -1,0 +1,184 @@
+[
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/active-red.log",
+    "sha256": "e365d6c980f8b254d46fbcbc96c914743ea57df270f7ed2df806dd20ab44499a",
+    "bytes": 2456,
+    "test_summary": "Ran 7 tests in 0.313s",
+    "note": "Expected RED evidence preserved"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/contracts-red.log",
+    "sha256": "73465ae2e768dcd4bae33b85a81e88dd43cab2cc41217e408016799e03be170b",
+    "bytes": 16794,
+    "test_summary": "Ran 26 tests in 0.012s",
+    "note": "Expected RED evidence preserved"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/contracts-stage1.log",
+    "sha256": "969371343dd1e8f70b8613afdcf140c177c7d52a721ad828b144a373d1f37543",
+    "bytes": 3200,
+    "test_summary": "Ran 26 tests in 1.026s",
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/contracts-stage2.log",
+    "sha256": "86818d5e76a6a0841d7a3df4280f4d476dd9fad0d0ea7ea6dc5ec2af50be6477",
+    "bytes": 3800,
+    "test_summary": "Ran 33 tests in 28.595s",
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/contracts-stage3.log",
+    "sha256": "348d79eb3cb457172085d012f6d9ae13d4c5f960e15efbebc5f46d27eeeb9cc5",
+    "bytes": 5333,
+    "test_summary": "Ran 45 tests in 35.911s",
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/contracts-stage4.log",
+    "sha256": "38db59b39024638670736257e316455c45df1230e5e9bb78232fd4811c2abe67",
+    "bytes": 5907,
+    "test_summary": "Ran 49 tests in 35.147s",
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-final-v1/contracts.log",
+    "sha256": "232623baf37ee664497bf7514fd94ce503c8f0e82e8093dbc4b7628d733c59ba",
+    "bytes": 6020,
+    "test_summary": "Ran 50 tests in 35.676s",
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-final-v1/frozen_contract.log",
+    "sha256": "5dd3e5c1ba8ca41ae805367e8b8cfb06d096a41099086c13c01f1507566c2581",
+    "bytes": 138,
+    "test_summary": null,
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-final-v1/negative_audits.log",
+    "sha256": "5f6ca54a855f9224201a26d1b157cd4834b2c390a214cd28fb8773d62bdf293c",
+    "bytes": 1533,
+    "test_summary": null,
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-final-v1/original_model_unchanged.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "test_summary": null,
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-final-v1/proc_research_audit_help.log",
+    "sha256": "5ad57e5164baa58dc52c5110d5b7f46edf41bddd934db530b48f2a7079d7c79f",
+    "bytes": 225,
+    "test_summary": null,
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-final-v1/proc_research_calibration_run_help.log",
+    "sha256": "33b0ce7384339f984e0a2f93a3f1ebd06e524842d21e46af5c42f0e9138d7fc9",
+    "bytes": 251,
+    "test_summary": null,
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-final-v1/proc_research_evaluate_help.log",
+    "sha256": "d6e05ef617e58ebe4164699063afa27d4b35f0e246680504ab172e1ec1ca4cf3",
+    "bytes": 310,
+    "test_summary": null,
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-final-v1/proc_research_prepare_help.log",
+    "sha256": "ff69ae99569fc6dc8f2369a36de53ccae90fa5845223281df7daa6ccde6d6774",
+    "bytes": 261,
+    "test_summary": null,
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-final-v1/proc_research_report_help.log",
+    "sha256": "bdbafdaf156b1affe7499f3edc1d923ad5b3b84737e3b6dd19774531f83e2195",
+    "bytes": 390,
+    "test_summary": null,
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-final-v1/whitespace.log",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "bytes": 0,
+    "test_summary": null,
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/gates-red.log",
+    "sha256": "63b4678a17900d3891709e39ce4c289ed8bdcd6b2e521338b54bf0a34bb7ef85",
+    "bytes": 3219,
+    "test_summary": "Ran 4 tests in 0.015s",
+    "note": "Expected RED evidence preserved"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/gates-resume-red.log",
+    "sha256": "fdd1d1d8930880b6b6ce30f732af93a60045c2ecbbef21714b3d7866f5785f98",
+    "bytes": 2289,
+    "test_summary": "Ran 6 tests in 0.040s",
+    "note": "Expected RED evidence preserved"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/negative-final.log",
+    "sha256": "50fb59f5d0ebdddb5696ebe8fa951425bd2f85061428f9acd6bac6162ce9b5ef",
+    "bytes": 1533,
+    "test_summary": null,
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/pipeline-red.log",
+    "sha256": "59b526353321476059de610eddaf3a456fdc2ea2d1f86f4dcb5239bacb541a62",
+    "bytes": 1184,
+    "test_summary": "Ran 3 tests in 7.671s",
+    "note": "Expected RED evidence preserved"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/pipeline-stage1.log",
+    "sha256": "79e020fb26f5b5da8680ac95d615730e0ecc59a575420d4040d66c6e0b0d8d90",
+    "bytes": 624,
+    "test_summary": "Ran 3 tests in 13.179s",
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/pool-red.log",
+    "sha256": "aa59e0eb20de31e3a2e048849afabb0227a030a0323828b02e174d04008278dd",
+    "bytes": 1913,
+    "test_summary": "Ran 8 tests in 27.318s",
+    "note": "Expected RED evidence preserved"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/review-green.log",
+    "sha256": "1ed1bde5f4f7ef30025981c0b307e434857b3a9acb1df9f38f4f8fc9dece8d79",
+    "bytes": 813,
+    "test_summary": "Ran 5 tests in 0.263s",
+    "note": "Actual command log; see recorded result"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/review-red.log",
+    "sha256": "23b18c79420c81a16f3f6f0e3c425521644a13abda6390f136e94542b6e390eb",
+    "bytes": 3450,
+    "test_summary": "Ran 5 tests in 0.071s",
+    "note": "Expected RED evidence preserved"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/review-row-red.log",
+    "sha256": "404d08e01cc08caa1dad38fca518f3938da1405675f6241947ff8925292989c5",
+    "bytes": 1725,
+    "test_summary": "Ran 6 tests in 0.226s",
+    "note": "Expected RED evidence preserved"
+  },
+  {
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/runtime-red.log",
+    "sha256": "070ad71f84fec5cc4ac2578f5bf5885b16361ec5337cd46cef2cb256f7518411",
+    "bytes": 4641,
+    "test_summary": "Ran 7 tests in 7.417s",
+    "note": "Expected RED evidence preserved"
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "schema": 1,
+  "task": "P01-scale-calibration",
+  "scope": "CPU-only engineering",
+  "branch": "codex/p01-scale-calibration",
+  "base_commit": "234c87e58fb08f02ba1cf163b2a73f5330d462e9",
+  "runs": [
+    {
+      "run_id": "cpu-final-v1",
+      "kind": "CPU_SYNTHETIC_ACCEPTANCE",
+      "status": "PASS",
+      "tests": 50,
+      "path": "/home/fengyi/CodeHome/Proc/runtime/p01/audit/cpu-final-v1",
+      "verification_sha256": "ee6b3eddfb3c445447c7edf6894b0138a32ecec9b9c638907bbd7ed7f613bd83",
+      "code_sha256": "5f8c193e655531cc00e1898878848f3a86f9a94dac35d0b128478756e359e166",
+      "config_sha256": "73f79700a36f20d6741a0550e2aeb637973ba9b50b71ac857c8f15a41743ce23",
+      "method_sha256": "3d1a8ef6a4b98917c8dfc9fe778179093958e773544457ab12514659396a44b0"
+    }
+  ],
+  "assets_initial_sha256": "dff4e04342f0091d65f59997bc42c8871ac073632f5dc986a4f8d63878560100",
+  "preflight_cpu_sha256": "984ca95f953da613450f23208679ae04e90196dbf9aacd58f479fb3532eb65d2",
+  "weight_sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+  "GPU_G0": "PENDING",
+  "actual_504": "PENDING",
+  "pilot": "PENDING",
+  "confirmation": "PENDING",
+  "research_conclusion": "PENDING",
+  "source_scene_map": "PENDING external provenance evidence",
+  "local_commit": "See local branch HEAD; final commit recorded in PROGRESS.md"
+}

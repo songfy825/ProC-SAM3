@@ -71,3 +71,11 @@ segmentation_visualizations_comparison/
 max_aggregation_visualizations/
 semantic_instance_fusion_visualizations/
 unexpanded_prompt_interference_visualizations/
+
+# P01: runtime assets live under R/runtime/p01, never in git
+/runtime/
+.superpowers/
+*.npz
+*.pt
+*.safetensors
+*.parquet

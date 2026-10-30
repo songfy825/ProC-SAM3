@@ -1,0 +1,17 @@
+test_output_expands_tilde_and_preserves_containment (test_portability.PortabilityContracts.test_output_expands_tilde_and_preserves_containment) ... ERROR
+
+======================================================================
+ERROR: test_output_expands_tilde_and_preserves_containment (test_portability.PortabilityContracts.test_output_expands_tilde_and_preserves_containment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 99, in test_output_expands_tilde_and_preserves_containment
+    output = runtime.output_directory(configured+'/audit/result')
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/proc_research/correction/runtime.py", line 65, in output_directory
+    raise ValueError(f'P02 artifacts must be in a new subdirectory under {runtime}')
+ValueError: P02 artifacts must be in a new subdirectory under /home/fengyi/E/CodeHome/Proc/runtime/p02/migration/compat/tmp/portability-05tyrnth/runtime
+
+----------------------------------------------------------------------
+Ran 1 test in 0.008s
+
+FAILED (errors=1)

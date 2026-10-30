@@ -1,0 +1,122 @@
+test_active_conda_environment_is_used_without_virtual_environment (test_portability.PortabilityContracts.test_active_conda_environment_is_used_without_virtual_environment) ... ok
+test_active_virtual_environment_precedes_conda (test_portability.PortabilityContracts.test_active_virtual_environment_precedes_conda) ... ok
+test_custom_runtime_overrides_inherited_cpu_and_cache_settings (test_portability.PortabilityContracts.test_custom_runtime_overrides_inherited_cpu_and_cache_settings) ... ERROR
+test_default_runtime_is_relative_to_checkout_not_working_directory (test_portability.PortabilityContracts.test_default_runtime_is_relative_to_checkout_not_working_directory) ... ERROR
+test_invalid_explicit_interpreter_never_falls_back (test_portability.PortabilityContracts.test_invalid_explicit_interpreter_never_falls_back) ... FAIL
+test_launcher_rejects_relative_runtime_before_mkdir (test_portability.PortabilityContracts.test_launcher_rejects_relative_runtime_before_mkdir) ... FAIL
+test_output_rejects_parent_and_sibling_escape (test_portability.PortabilityContracts.test_output_rejects_parent_and_sibling_escape) ...
+  test_output_rejects_parent_and_sibling_escape (test_portability.PortabilityContracts.test_output_rejects_parent_and_sibling_escape) (output='/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/compat/tmp/portability-v_5zp7d8/runtime/../escape') ... FAIL
+  test_output_rejects_parent_and_sibling_escape (test_portability.PortabilityContracts.test_output_rejects_parent_and_sibling_escape) (output='/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/compat/tmp/portability-v_5zp7d8/runtime-sibling/escape') ... FAIL
+test_output_rejects_parent_and_sibling_escape (test_portability.PortabilityContracts.test_output_rejects_parent_and_sibling_escape) ... FAIL
+test_output_rejects_symlink_escape (test_portability.PortabilityContracts.test_output_rejects_symlink_escape) ... ok
+test_output_subdirectory_is_created_but_existing_output_is_rejected (test_portability.PortabilityContracts.test_output_subdirectory_is_created_but_existing_output_is_rejected) ... ok
+test_path_python_is_used_without_local_or_active_environment (test_portability.PortabilityContracts.test_path_python_is_used_without_local_or_active_environment) ... FAIL
+test_relative_runtime_is_rejected_before_directory_creation (test_portability.PortabilityContracts.test_relative_runtime_is_rejected_before_directory_creation) ... FAIL
+test_relocated_help_and_guard_use_custom_runtime (test_portability.PortabilityContracts.test_relocated_help_and_guard_use_custom_runtime) ... FAIL
+test_relocated_launcher_defaults_runtime_to_its_checkout (test_portability.PortabilityContracts.test_relocated_launcher_defaults_runtime_to_its_checkout) ... FAIL
+
+======================================================================
+ERROR: test_custom_runtime_overrides_inherited_cpu_and_cache_settings (test_portability.PortabilityContracts.test_custom_runtime_overrides_inherited_cpu_and_cache_settings)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 54, in test_custom_runtime_overrides_inherited_cpu_and_cache_settings
+    self.assertEqual(runtime.runtime_root(), selected.resolve())
+                     ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'proc_research.correction.runtime' has no attribute 'runtime_root'
+
+======================================================================
+ERROR: test_default_runtime_is_relative_to_checkout_not_working_directory (test_portability.PortabilityContracts.test_default_runtime_is_relative_to_checkout_not_working_directory)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 40, in test_default_runtime_is_relative_to_checkout_not_working_directory
+    self.assertEqual(runtime.runtime_root(), (ROOT/'.p02-runtime').resolve())
+                     ^^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'proc_research.correction.runtime' has no attribute 'runtime_root'
+
+======================================================================
+FAIL: test_invalid_explicit_interpreter_never_falls_back (test_portability.PortabilityContracts.test_invalid_explicit_interpreter_never_falls_back)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 218, in test_invalid_explicit_interpreter_never_falls_back
+    self.assertNotEqual(result.returncode, 0, result.stdout+result.stderr)
+AssertionError: 0 == 0 : INTERPRETER_STARTED
+
+
+======================================================================
+FAIL: test_launcher_rejects_relative_runtime_before_mkdir (test_portability.PortabilityContracts.test_launcher_rejects_relative_runtime_before_mkdir)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 197, in test_launcher_rejects_relative_runtime_before_mkdir
+    self.assertNotEqual(result.returncode, 0, result.stdout+result.stderr)
+AssertionError: 0 == 0 : INTERPRETER_STARTED
+
+
+======================================================================
+FAIL: test_output_rejects_parent_and_sibling_escape (test_portability.PortabilityContracts.test_output_rejects_parent_and_sibling_escape) (output='/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/compat/tmp/portability-v_5zp7d8/runtime/../escape')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 95, in test_output_rejects_parent_and_sibling_escape
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_output_rejects_parent_and_sibling_escape (test_portability.PortabilityContracts.test_output_rejects_parent_and_sibling_escape) (output='/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/compat/tmp/portability-v_5zp7d8/runtime-sibling/escape')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 95, in test_output_rejects_parent_and_sibling_escape
+    with self.assertRaises(ValueError):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_output_rejects_parent_and_sibling_escape (test_portability.PortabilityContracts.test_output_rejects_parent_and_sibling_escape)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 98, in test_output_rejects_parent_and_sibling_escape
+    self.assertFalse((self.directory/'runtime-sibling').exists())
+AssertionError: True is not false
+
+======================================================================
+FAIL: test_path_python_is_used_without_local_or_active_environment (test_portability.PortabilityContracts.test_path_python_is_used_without_local_or_active_environment)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 251, in test_path_python_is_used_without_local_or_active_environment
+    self.assertEqual(Path(result.stdout.strip()).resolve(), Path(expected).resolve())
+AssertionError: PosixPath('/home/fengyi/E/CodeHome/ProC-SAM3-repro/conda-env/bin/python') != PosixPath('/home/fengyi/miniconda3/bin/python3.10')
+
+======================================================================
+FAIL: test_relative_runtime_is_rejected_before_directory_creation (test_portability.PortabilityContracts.test_relative_runtime_is_rejected_before_directory_creation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 71, in test_relative_runtime_is_rejected_before_directory_creation
+    with self.assertRaisesRegex(ValueError, 'absolute'):
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+======================================================================
+FAIL: test_relocated_help_and_guard_use_custom_runtime (test_portability.PortabilityContracts.test_relocated_help_and_guard_use_custom_runtime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 172, in test_relocated_help_and_guard_use_custom_runtime
+    self.assertEqual(result.returncode, 0, result.stdout+result.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 3, in <module>
+ImportError: cannot import name 'runtime_root' from 'proc_research.correction.runtime' (/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/compat/tmp/portability-5weqhojw/relocated checkout with spaces/proc_research/correction/runtime.py)
+
+
+======================================================================
+FAIL: test_relocated_launcher_defaults_runtime_to_its_checkout (test_portability.PortabilityContracts.test_relocated_launcher_defaults_runtime_to_its_checkout)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3-p02/tests/p02/test_portability.py", line 209, in test_relocated_launcher_defaults_runtime_to_its_checkout
+    self.assertEqual(result.returncode, 0, result.stdout+result.stderr)
+AssertionError: 1 != 0 : Traceback (most recent call last):
+  File "<string>", line 1, in <module>
+ImportError: cannot import name 'runtime_root' from 'proc_research.correction.runtime' (/home/fengyi/E/CodeHome/Proc/runtime/p02/migration/compat/tmp/portability-did6rvdk/relocated checkout with spaces/proc_research/correction/runtime.py)
+
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.982s
+
+FAILED (failures=9, errors=2)

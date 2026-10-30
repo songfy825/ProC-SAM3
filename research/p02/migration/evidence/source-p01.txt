@@ -1,0 +1,67 @@
+test_p01_modules_exist (test_contracts.Availability.test_p01_modules_exist) ... ok
+test_class_mapping_preserved (test_contracts.Cache.test_class_mapping_preserved) ... ok
+test_lossless_roundtrip_and_corruption (test_contracts.Cache.test_lossless_roundtrip_and_corruption) ... ok
+test_metadata_identity_and_no_overwrite (test_contracts.Cache.test_metadata_identity_and_no_overwrite) ... ok
+test_non_fp32_rejected (test_contracts.Cache.test_non_fp32_rejected) ... ok
+test_all_zero_is_background (test_contracts.Decode.test_all_zero_is_background) ... ok
+test_ecd_independent_hand_calculation (test_contracts.Decode.test_ecd_independent_hand_calculation) ... ok
+test_mean_continuous_not_labels (test_contracts.Decode.test_mean_continuous_not_labels) ... ok
+test_multiview_disagreement_and_uncalibrated_fallback (test_contracts.Decode.test_multiview_disagreement_and_uncalibrated_fallback) ... ok
+test_official_ecd_parity (test_contracts.Decode.test_official_ecd_parity) ... ok
+test_rms_and_zero_factor (test_contracts.Decode.test_rms_and_zero_factor) ... ok
+test_zero_evidence_does_not_nan (test_contracts.Decode.test_zero_evidence_does_not_nan) ... ok
+test_full_confusion_ignore_and_absent (test_contracts.Evaluation.test_full_confusion_ignore_and_absent) ... ok
+test_loveda_label_mapping (test_contracts.Evaluation.test_loveda_label_mapping) ... ok
+test_paired_scene_bootstrap (test_contracts.Evaluation.test_paired_scene_bootstrap) ... ok
+test_actual_encoder_guard (test_contracts.Geometry.test_actual_encoder_guard) ... ok
+test_identity_does_not_interpolate (test_contracts.Geometry.test_identity_does_not_interpolate) ... ok
+test_label_interpolation_rejected (test_contracts.Geometry.test_label_interpolation_rejected) ... ok
+test_non_square_and_borders (test_contracts.Geometry.test_non_square_and_borders) ... ok
+test_image_leak_and_gt_rejected (test_contracts.Isolation.test_image_leak_and_gt_rejected) ... ok
+test_run_identity_immutable (test_contracts.Isolation.test_run_identity_immutable) ... ok
+test_scene_evidence_and_budget_required (test_contracts.Isolation.test_scene_evidence_and_budget_required) ... ok
+test_valid_and_scene_leak_negative (test_contracts.Isolation.test_valid_and_scene_leak_negative) ... ok
+test_scene_support_not_pixel_or_view_count (test_contracts.Signatures.test_scene_support_not_pixel_or_view_count) ... ok
+test_shared_priors_only_signature_changes (test_contracts.Signatures.test_shared_priors_only_signature_changes) ... ok
+test_shuffle_breaks_mapping_preserves_counts (test_contracts.Signatures.test_shuffle_breaks_mapping_preserves_counts) ... ok
+test_bank_tamper_rejected (test_pipeline.Pipeline.test_bank_tamper_rejected) ... ok
+test_processor_real_cpu_transform_sizes (test_pipeline.Pipeline.test_processor_real_cpu_transform_sizes) ... /home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/lib/python3.12/site-packages/torch/amp/autocast_mode.py:266: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+ok
+test_synthetic_fit_decode_evaluate_report (test_pipeline.Pipeline.test_synthetic_fit_decode_evaluate_report) ... ok
+test_background_and_agreement_not_replaced_by_argmax (test_review_fixes.ReviewFixes.test_background_and_agreement_not_replaced_by_argmax) ... ok
+test_code_identity_tracks_untracked_runtime_shell (test_review_fixes.ReviewFixes.test_code_identity_tracks_untracked_runtime_shell) ... ok
+test_confirmation_claim_cannot_change_with_seal_filename (test_review_fixes.ReviewFixes.test_confirmation_claim_cannot_change_with_seal_filename) ... ok
+test_differing_active_vocabularies_rejected (test_review_fixes.ReviewFixes.test_differing_active_vocabularies_rejected) ... ok
+test_production_minimum_scene_support_cannot_be_weakened (test_review_fixes.ReviewFixes.test_production_minimum_scene_support_cannot_be_weakened) ... ok
+test_receipt_failure_not_silently_accepted (test_review_fixes.ReviewFixes.test_receipt_failure_not_silently_accepted) ... ok
+test_row_fallback_counts_all_views_and_signature_winners (test_review_fixes.ReviewFixes.test_row_fallback_counts_all_views_and_signature_winners) ... ok
+test_adapter_retains_algorithm_methods (test_runtime.RuntimeContracts.test_adapter_retains_algorithm_methods) ... ok
+test_changed_published_pool_rejected (test_runtime.RuntimeContracts.test_changed_published_pool_rejected) ... ok
+test_confirmation_requires_sealed_config_and_receipts (test_runtime.RuntimeContracts.test_confirmation_requires_sealed_config_and_receipts) ... ok
+test_default_config_freezes_required_controls (test_runtime.RuntimeContracts.test_default_config_freezes_required_controls) ... ok
+test_gpu_disabled_without_both_explicit_switches (test_runtime.RuntimeContracts.test_gpu_disabled_without_both_explicit_switches) ... ok
+test_missing_pool_rejected_before_model_import (test_runtime.RuntimeContracts.test_missing_pool_rejected_before_model_import) ... ok
+test_negative_audit_entrypoint (test_runtime.RuntimeContracts.test_negative_audit_entrypoint) ... ok
+test_original_reducer_order_logit_then_sigmoid (test_runtime.RuntimeContracts.test_original_reducer_order_logit_then_sigmoid) ... ok
+test_budget_selection_can_reduce_with_evidence (test_stage_gates.StageGates.test_budget_selection_can_reduce_with_evidence) ... ok
+test_capacity_plan_includes_all_splits (test_stage_gates.StageGates.test_capacity_plan_includes_all_splits) ... ok
+test_reordered_manifest_cannot_reuse_confirmation_images (test_stage_gates.StageGates.test_reordered_manifest_cannot_reuse_confirmation_images) ... ok
+test_resume_capacity_only_accounts_for_missing_views (test_stage_gates.StageGates.test_resume_capacity_only_accounts_for_missing_views) ... ok
+test_resume_g0_requires_saved_benchmark (test_stage_gates.StageGates.test_resume_g0_requires_saved_benchmark) ... ok
+test_seal_bound_bank_required_in_confirmation_decode (test_stage_gates.StageGates.test_seal_bound_bank_required_in_confirmation_decode) ... ok
+test_checkpoint_and_runtime_paths_are_explicit (test_transfer.Transfer.test_checkpoint_and_runtime_paths_are_explicit) ... ok
+test_cpu_retry_preserves_incomplete_evidence (test_transfer.Transfer.test_cpu_retry_preserves_incomplete_evidence) ... ok
+test_inventory_relocation_preserves_ids_and_hash (test_transfer.Transfer.test_inventory_relocation_preserves_ids_and_hash) ... ok
+test_launch_plan_has_g0_before_expansion_and_separate_confirmation (test_transfer.Transfer.test_launch_plan_has_g0_before_expansion_and_separate_confirmation) ... ok
+test_launch_requires_explicit_gpu_authorization (test_transfer.Transfer.test_launch_requires_explicit_gpu_authorization) ... ok
+test_launcher_runtime_follows_moved_checkout (test_transfer.Transfer.test_launcher_runtime_follows_moved_checkout) ... ok
+test_package_repair_uses_archive_link_metadata (test_transfer.Transfer.test_package_repair_uses_archive_link_metadata) ... ok
+test_resume_decode_is_bound_to_split_and_upstream (test_transfer.Transfer.test_resume_decode_is_bound_to_split_and_upstream) ... ok
+test_resume_evaluation_rejects_changed_label_manifest (test_transfer.Transfer.test_resume_evaluation_rejects_changed_label_manifest) ... ok
+test_resume_rejects_wrong_stage_receipt (test_transfer.Transfer.test_resume_rejects_wrong_stage_receipt) ... ok
+
+----------------------------------------------------------------------
+Ran 60 tests in 42.897s
+
+OK

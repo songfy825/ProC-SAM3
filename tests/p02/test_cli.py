@@ -1,5 +1,6 @@
 """Negative CLI evidence must prove the expected rejection, not just a crash."""
 import json
+import os
 from pathlib import Path
 import subprocess
 import tempfile
@@ -10,7 +11,7 @@ from proc_research.cache import sha256
 from test_provenance import write_fixture
 
 ROOT = Path(__file__).resolve().parents[2]
-RUNTIME = Path('/home/fengyi/CodeHome/Proc/runtime/p02')
+RUNTIME = Path(os.environ.get('P02_RUNTIME', str(ROOT/'.p02-runtime'))).expanduser().resolve()
 
 
 class CLIContracts(unittest.TestCase):

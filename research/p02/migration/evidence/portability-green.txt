@@ -1,0 +1,21 @@
+test_active_conda_environment_is_used_without_virtual_environment (test_portability.PortabilityContracts.test_active_conda_environment_is_used_without_virtual_environment) ... ok
+test_active_virtual_environment_precedes_conda (test_portability.PortabilityContracts.test_active_virtual_environment_precedes_conda) ... ok
+test_custom_runtime_overrides_inherited_cpu_and_cache_settings (test_portability.PortabilityContracts.test_custom_runtime_overrides_inherited_cpu_and_cache_settings) ... ok
+test_default_runtime_is_relative_to_checkout_not_working_directory (test_portability.PortabilityContracts.test_default_runtime_is_relative_to_checkout_not_working_directory) ... ok
+test_invalid_explicit_interpreter_never_falls_back (test_portability.PortabilityContracts.test_invalid_explicit_interpreter_never_falls_back) ... ok
+test_launcher_rejects_relative_runtime_before_mkdir (test_portability.PortabilityContracts.test_launcher_rejects_relative_runtime_before_mkdir) ... ok
+test_local_virtual_environment_precedes_local_p01_environment (test_portability.PortabilityContracts.test_local_virtual_environment_precedes_local_p01_environment) ... ok
+test_output_expands_tilde_and_preserves_containment (test_portability.PortabilityContracts.test_output_expands_tilde_and_preserves_containment) ... ok
+test_output_must_be_a_child_of_runtime_root (test_portability.PortabilityContracts.test_output_must_be_a_child_of_runtime_root) ... ok
+test_output_rejects_parent_and_sibling_escape (test_portability.PortabilityContracts.test_output_rejects_parent_and_sibling_escape) ... ok
+test_output_rejects_symlink_escape (test_portability.PortabilityContracts.test_output_rejects_symlink_escape) ... ok
+test_output_subdirectory_is_created_but_existing_output_is_rejected (test_portability.PortabilityContracts.test_output_subdirectory_is_created_but_existing_output_is_rejected) ... ok
+test_path_python_is_used_without_local_or_active_environment (test_portability.PortabilityContracts.test_path_python_is_used_without_local_or_active_environment) ... ok
+test_relative_runtime_is_rejected_before_directory_creation (test_portability.PortabilityContracts.test_relative_runtime_is_rejected_before_directory_creation) ... ok
+test_relocated_help_and_guard_use_custom_runtime (test_portability.PortabilityContracts.test_relocated_help_and_guard_use_custom_runtime) ... ok
+test_relocated_launcher_defaults_runtime_to_its_checkout (test_portability.PortabilityContracts.test_relocated_launcher_defaults_runtime_to_its_checkout) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 5.162s
+
+OK

@@ -1,0 +1,15 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux",
+  "machine": "x86_64",
+  "torch": "2.7.1+cu126",
+  "numpy": "1.26.4",
+  "Pillow": "11.3.0",
+  "runtime_policy": {
+    "hardware_probes": 0,
+    "model_inference_calls": 0,
+    "api_calls": 0,
+    "scope": "policy for this guarded process only; not a historical session audit",
+    "availability_answer": "constant False by CPU policy, no driver query"
+  }
+}

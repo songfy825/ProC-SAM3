@@ -2,24 +2,32 @@
 import os
 from pathlib import Path
 
-RUNTIME = Path('/home/fengyi/CodeHome/Proc/runtime/p02')
 _POLICY = {'hardware_probes': 0, 'model_inference_calls': 0, 'api_calls': 0,
            'scope': 'policy for this guarded process only; not a historical session audit',
            'availability_answer': 'constant False by CPU policy, no driver query'}
 
 
+def runtime_root():
+    """Resolve this checkout's runtime without inheriting P01 machine paths."""
+    path = Path(os.environ.get('P02_RUNTIME', str(Path(__file__).resolve().parents[2]/'.p02-runtime'))).expanduser()
+    if not path.is_absolute():
+        raise ValueError('P02_RUNTIME must be an absolute path (or start with ~)')
+    return path.resolve()
+
+
 def force_environment():
+    runtime = runtime_root()
     fixed = {'P01_ENABLE_GPU': '0', 'CUDA_VISIBLE_DEVICES': '',
              'HF_HUB_OFFLINE': '1', 'TRANSFORMERS_OFFLINE': '1',
              'HF_HUB_DISABLE_TELEMETRY': '1', 'PYTHONDONTWRITEBYTECODE': '1',
-             'P01_RUNTIME': str(RUNTIME/'compat'), 'PYTHONNOUSERSITE': '1',
+             'P02_RUNTIME': str(runtime), 'P01_RUNTIME': str(runtime/'compat'), 'PYTHONNOUSERSITE': '1',
              'OMP_NUM_THREADS': '1', 'MKL_NUM_THREADS': '1'}
     os.environ.update(fixed)
     for key, suffix in {'HF_HOME': 'cache/hf', 'TORCH_HOME': 'cache/torch',
                         'XDG_CACHE_HOME': 'cache', 'TMPDIR': 'tmp',
                         'TRITON_CACHE_DIR': 'cache/triton', 'MPLCONFIGDIR': 'cache/matplotlib'}.items():
-        os.environ[key] = str(RUNTIME/'compat'/suffix)
-    (RUNTIME/'compat/tmp').mkdir(parents=True, exist_ok=True)
+        os.environ[key] = str(runtime/'compat'/suffix)
+    (runtime/'compat/tmp').mkdir(parents=True, exist_ok=True)
 
 
 def denied(*args, **kwargs):
@@ -51,8 +59,9 @@ def install_cpu_guard():
 
 
 def output_directory(value):
-    path = Path(value).resolve()
-    if not path.is_relative_to(RUNTIME.resolve()):
-        raise ValueError('P02 artifacts must be under /home/fengyi/CodeHome/Proc/runtime/p02')
+    runtime = runtime_root()
+    path = Path(value).expanduser().resolve()
+    if path == runtime or not path.is_relative_to(runtime):
+        raise ValueError(f'P02 artifacts must be in a new subdirectory under {runtime}')
     path.mkdir(parents=True, exist_ok=False)
     return path

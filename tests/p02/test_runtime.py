@@ -7,6 +7,7 @@ import unittest
 class CPUContract(unittest.TestCase):
     def test_guard_forces_cpu_offline_and_rejects_gpu_initialization(self):
         from proc_research.correction.runtime import install_cpu_guard
+        runtime = Path(os.environ.get('P02_RUNTIME', str(Path(__file__).resolve().parents[2]/'.p02-runtime'))).expanduser().resolve()
         os.environ['P01_ENABLE_GPU'] = '1'
         os.environ['CUDA_VISIBLE_DEVICES'] = '0'
         evidence = install_cpu_guard()
@@ -14,7 +15,7 @@ class CPUContract(unittest.TestCase):
         self.assertEqual(os.environ['P01_ENABLE_GPU'], '0')
         self.assertEqual(os.environ['CUDA_VISIBLE_DEVICES'], '')
         self.assertEqual(os.environ['HF_HUB_OFFLINE'], '1')
-        self.assertEqual(os.environ['P01_RUNTIME'], '/home/fengyi/CodeHome/Proc/runtime/p02/compat')
+        self.assertEqual(os.environ['P01_RUNTIME'], str(runtime/'compat'))
         self.assertFalse(torch.cuda.is_available())  # policy answer, not hardware probe
         with self.assertRaisesRegex(RuntimeError, 'P02 CPU'):
             torch.cuda.init()

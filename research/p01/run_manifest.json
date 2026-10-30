@@ -49,6 +49,7 @@
     "GPU_validation": "PENDING",
     "review": "PASS after fixes",
     "preflight_sha256": "d97c8bd08fb5e033c23744ccca129fa09a92079d4a106f1610e1c85b9a490541",
-    "intermediate_run": "cpu-transfer-v1 superseded by v2 after evaluator resume fix"
+    "intermediate_run": "cpu-transfer-v1 superseded by v2 after evaluator resume fix",
+    "implementation_commit": "0ae88f2410f7784f620390fa1e085832c4acf769"
   }
 }

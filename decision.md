@@ -18,3 +18,5 @@ The independent reviews and fixes are recorded in research/p01/CODE_REVIEW.md. T
 Implementation commit: `e28c65b15321008c6964fc84bdabec4355b7c8ae`. Final delivery HEAD may additionally contain the documentation-only receipt commit. Verified implementation code hash is in research/p01/evidence/verification.json.
 
 Transfer decision: ready to install dependencies and prepare inputs on Ubuntu x86_64 using TRANSFER_4090.md. This is conditional execution readiness, not proof that the experiment only needs spare GPU memory. Actual scene provenance, fresh-environment installation and GPU G0 still need validation. Requirements and code hashes are recorded in the run manifest; no binary environment archive is needed under the revised user request.
+
+Transfer implementation commit: `0ae88f2410f7784f620390fa1e085832c4acf769`; subsequent receipt commit changes only the ledger.

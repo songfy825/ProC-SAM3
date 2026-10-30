@@ -20,3 +20,5 @@ Implementation commit: `e28c65b15321008c6964fc84bdabec4355b7c8ae`. Final deliver
 Transfer decision: ready to install dependencies and prepare inputs on Ubuntu x86_64 using TRANSFER_4090.md. This is conditional execution readiness, not proof that the experiment only needs spare GPU memory. Actual scene provenance, fresh-environment installation and GPU G0 still need validation. Requirements and code hashes are recorded in the run manifest; no binary environment archive is needed under the revised user request.
 
 Transfer implementation commit: `0ae88f2410f7784f620390fa1e085832c4acf769`; subsequent receipt commit changes only the ledger.
+
+Asset decision: **reuse target datasets, transfer only the large SAM3 weight plus small metadata/helpers**. Read-only full validation-pool comparison found 26,626/26,626 image/GT files identical between this machine and 192.168.0.18. Target LoveDA spelling is `loveDA`; prepared aliases preserve original paths and existing settings. Weight copy and metadata archive are locally verified. Remote upload/alias creation were not performed. This proves byte equality, not scene independence or model accuracy; research remains PENDING.

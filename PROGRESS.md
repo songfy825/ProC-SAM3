@@ -60,3 +60,11 @@ Implementation commit: `e28c65b15321008c6964fc84bdabec4355b7c8ae` on `codex/p01-
 - Final transfer code SHA256 `ca1816ca8606689c2f4077851d89819758b38dead540c6be86807563659eb9a3`; requirements SHA256 `027da4108d4aceaf6b4e25ef95499cbe2abcf274b5d7e6ee4d837b5a3c1fd5cb`. Receipts/log catalog: `research/p01/evidence/transfer-*`. Full logs remain under R/runtime/p01/audit. No large assets or environment binaries are included in Git.
 
 Transfer implementation commit: `0ae88f2410f7784f620390fa1e085832c4acf769`. A documentation-only receipt commit records it; verified production code remains unchanged. Push target: `git@github.com:songfy825/ProC-SAM3.git`, branch `codex/p01-scale-calibration`; local source origin remains read-only.
+
+## Asset delivery / target comparison
+
+- User requested packaging weights/data with compatible paths, then authorized read-only SSH comparison to `fengyi@192.168.0.18` and narrowed large-file transport to SAM3 if data match. Credentials are not stored in files.
+- Both machines' required LoveDA/iSAID validation image and GT bytes were fully hashed: 26,626 files / 30,509,113,565 bytes, exact match, zero missing/extra/mismatched files. Remote LoveDA directory is `loveDA`; existing-target alias helper handles that spelling without changing model code/config. Evidence: `research/p01/asset-transfer/remote-comparison.json`.
+- Final local delivery: `/home/fengyi/CodeHome/Proc/runtime/p01/transfer/weight-only-v1/`. Verified `sam3.pt` (3.21 GiB) + `p01-metadata-v2.tar.gz` (4,071,005 bytes) + SHA256SUMS + instructions. No dataset images/GT images in final delivery; original files retained. Remote weight path was absent. No remote writes performed.
+- Migration helpers have 15 passing CPU tests and independent review/fix/spot-check. Source model code/config, requirements and production digest remain unchanged from ec7f57e; previous 60-test production acceptance is retained, not rerun. All actual commands, RED/GREEN logs and interrupted-full-package evidence are recorded in the asset-transfer ledger/runtime audit.
+- Actual scene map, final isolated splits, target dependency install and GPU G0/pilot/confirmation remain PENDING. Instructions and current transfer scope: `research/p01/asset-transfer/REMOTE_TRANSFER.md`.

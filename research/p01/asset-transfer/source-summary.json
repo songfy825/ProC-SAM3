@@ -1,0 +1,21 @@
+{
+  "files": 26647,
+  "payload_bytes": 33974808900,
+  "payload_gib": 31.641506496816874,
+  "counts": {
+    "LoveDA": {
+      "images": 1669,
+      "GT_files": 1669,
+      "image_bytes": 2411772953,
+      "GT_bytes": 15695837
+    },
+    "iSAID": {
+      "images": 11644,
+      "GT_files": 11644,
+      "image_bytes": 28044597288,
+      "GT_bytes": 37047487
+    }
+  },
+  "production_code_sha256": "ca1816ca8606689c2f4077851d89819758b38dead540c6be86807563659eb9a3",
+  "status": "FULL_PAYLOAD_CANCELLED; target data verified identical; weight-only delivery PASS"
+}

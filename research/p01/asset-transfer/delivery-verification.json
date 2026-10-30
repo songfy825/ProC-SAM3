@@ -1,0 +1,27 @@
+{
+  "status": "PASS",
+  "weight": {
+    "source": "/home/fengyi/sam3.pt",
+    "path": "/home/fengyi/CodeHome/Proc/runtime/p01/transfer/weight-only-v1/sam3.pt",
+    "bytes": 3450062241,
+    "sha256": "9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e",
+    "source_and_copy_verified": true
+  },
+  "metadata_archive": {
+    "status": "PASS",
+    "files": 21,
+    "payload_bytes": 15634936,
+    "archive_bytes": 4071005,
+    "archive_sha256": "8f8b1dc80c50942c19b7a9127139f7d6ebe0a863097cb70835b0295c04b920fd",
+    "seconds": 0.10750014800578356,
+    "GPU": "not used"
+  },
+  "dataset_files_copied": 0,
+  "target_writes": false,
+  "copy_verify_seconds": 26.449883177992888,
+  "production_code_sha256": "ca1816ca8606689c2f4077851d89819758b38dead540c6be86807563659eb9a3",
+  "metadata_filename": "p01-metadata-v2.tar.gz",
+  "supersedes": "superseded-v1/verification.json",
+  "revision": 2,
+  "revision_reason": "Correct metadata field naming: production code digest and dataset digest are distinct. Weight copy is unchanged and was not repeated."
+}

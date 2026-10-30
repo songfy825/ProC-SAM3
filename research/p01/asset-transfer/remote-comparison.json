@@ -1,0 +1,88 @@
+{
+  "status": "EXACT_MATCH_REQUIRED_VALIDATION_POOLS",
+  "host": "fengyi@192.168.0.18",
+  "local": {
+    "status": "PASS",
+    "inventory_sha256": "725135e372100ab2e85a7058005f816f5d572c7374d8d7bba48282f8035d6b55",
+    "expected_canonical_sha256": "a8eb43b4735e2d1094eb422efaf9e6f327ccb0c80b4fbc96e9fef49de4470011",
+    "actual_canonical_sha256": "a8eb43b4735e2d1094eb422efaf9e6f327ccb0c80b4fbc96e9fef49de4470011",
+    "datasets": [
+      {
+        "dataset": "LoveDA",
+        "root": "/home/fengyi/E/data/SegEarth/LoveDA",
+        "expected_files": 3338,
+        "matched_files": 3338,
+        "checked_bytes": 2427468790,
+        "missing": [],
+        "size_mismatch": [],
+        "hash_mismatch": [],
+        "changed_during_read": [],
+        "extra_files": [],
+        "required_files_match": true,
+        "exact_validation_tree_match": true
+      },
+      {
+        "dataset": "iSAID",
+        "root": "/home/fengyi/E/data/SegEarth/iSAID",
+        "expected_files": 23288,
+        "matched_files": 23288,
+        "checked_bytes": 28081644775,
+        "missing": [],
+        "size_mismatch": [],
+        "hash_mismatch": [],
+        "changed_during_read": [],
+        "extra_files": [],
+        "required_files_match": true,
+        "exact_validation_tree_match": true
+      }
+    ],
+    "seconds": 212.56485616398277,
+    "writes_to_dataset": false,
+    "GPU_used": false
+  },
+  "remote": {
+    "status": "PASS",
+    "inventory_sha256": "725135e372100ab2e85a7058005f816f5d572c7374d8d7bba48282f8035d6b55",
+    "expected_canonical_sha256": "a8eb43b4735e2d1094eb422efaf9e6f327ccb0c80b4fbc96e9fef49de4470011",
+    "actual_canonical_sha256": "a8eb43b4735e2d1094eb422efaf9e6f327ccb0c80b4fbc96e9fef49de4470011",
+    "datasets": [
+      {
+        "dataset": "LoveDA",
+        "root": "/home/fengyi/data/SegEarth/loveDA",
+        "expected_files": 3338,
+        "matched_files": 3338,
+        "checked_bytes": 2427468790,
+        "missing": [],
+        "size_mismatch": [],
+        "hash_mismatch": [],
+        "changed_during_read": [],
+        "extra_files": [],
+        "required_files_match": true,
+        "exact_validation_tree_match": true
+      },
+      {
+        "dataset": "iSAID",
+        "root": "/home/fengyi/data/SegEarth/iSAID",
+        "expected_files": 23288,
+        "matched_files": 23288,
+        "checked_bytes": 28081644775,
+        "missing": [],
+        "size_mismatch": [],
+        "hash_mismatch": [],
+        "changed_during_read": [],
+        "extra_files": [],
+        "required_files_match": true,
+        "exact_validation_tree_match": true
+      }
+    ],
+    "seconds": 30.586071066907607,
+    "writes_to_dataset": false,
+    "GPU_used": false
+  },
+  "remote_weight": {
+    "path": "/home/fengyi/sam3.pt",
+    "exists": false
+  },
+  "target_writes": false,
+  "scope": "LoveDA and iSAID img_dir/val plus ann_dir/val only; no claim about other datasets/splits"
+}

@@ -1,0 +1,74 @@
+{
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-build-v1.log": {
+    "sha256": "b7152ea33cc4f550a21ebea72cb5c352d7900645d49a4f0dd011f86da5bbefb6",
+    "bytes": 1823
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-coverage-red.log": {
+    "sha256": "9087d471e0627a89a0ee9b63c068e45896b18770f0a522043b454721164455cf",
+    "bytes": 733
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-existing-data-red.log": {
+    "sha256": "e89db1d4d71199e10df965a9c69e44dfcb6603fb12102715ec41290e93c2b530",
+    "bytes": 1847
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-final-v1.log": {
+    "sha256": "9a9e8bc18df10ea9a6e4bedbe6018a83c68b5060094976e3feabca81859becb8",
+    "bytes": 1013
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-final-v2.log": {
+    "sha256": "d219718c4b343794ece0642a7cebaf0db1cc940112452c233de8f48a56bdafa3",
+    "bytes": 1108
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-final-v3.log": {
+    "sha256": "1dbc4b451d68c655e42325b5fc4a85f6b935e505d04d545a736d2242c11a2881",
+    "bytes": 1200
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-final-v4.log": {
+    "sha256": "ff6c77321c21dc2e7d0771adc9d2d97310eef58caf26768367a8d6e24cdc4291",
+    "bytes": 1268
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-green-v1.log": {
+    "sha256": "9f1cb26098937ee4ec7c9816927534a07cb2f58349b979e7fdc2dd855700e3b1",
+    "bytes": 717
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-green-v2.log": {
+    "sha256": "338c57c1b4c6b66c4fe7641d203b68c788720f8b743c030094fb6f13591e981e",
+    "bytes": 804
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-parent-red.log": {
+    "sha256": "9707a52c43115d229eb748c4ab4fac934c8d03d45f80ac2cc3ef10f3ca59832a",
+    "bytes": 1812
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-red.log": {
+    "sha256": "e84594c4053bcd1935508bc08872ef36455ddf8aa37538eb4ea0539621fb1713",
+    "bytes": 4357
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-review-red.log": {
+    "sha256": "47f4ad0698176721def0b89424f9937951ebe92cbe563aed73e2e33379e7577d",
+    "bytes": 2618
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/assets-stage1.log": {
+    "sha256": "913131651a8546513b0604dafd4c47aec76cb6ebd69924389bb8bd6c7a7586a2",
+    "bytes": 1325
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/audit/weight-only-v1.log": {
+    "sha256": "03b58f0d8aa34b79e93e7435e815037bc76408b3fb207f94c6ed3594c98e8150",
+    "bytes": 835
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/transfer/remote-compare-v1/local.json": {
+    "sha256": "498d3bbd13d85c0549bbbcfbaeefa0105b8a669fc64930c867642a5b2c4a0b67",
+    "bytes": 1210
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/transfer/remote-compare-v1/remote.json": {
+    "sha256": "c6753ca1164adae626ea4a74b8a0e9ba059677091cca77e7f35c47b5a3591f81",
+    "bytes": 1206
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/transfer/remote-compare-v1/expected.json": {
+    "sha256": "725135e372100ab2e85a7058005f816f5d572c7374d8d7bba48282f8035d6b55",
+    "bytes": 4864384
+  },
+  "/home/fengyi/CodeHome/Proc/runtime/p01/transfer/remote-compare-v1/command.json": {
+    "sha256": "d341101ed811c6dea07202e8a6b381b99b847ba94b31a1e694ed6be0f9554f71",
+    "bytes": 4379
+  }
+}

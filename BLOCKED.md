@@ -9,3 +9,5 @@ Data provenance: existing LoveDA image manifests lack verified original scene ID
 GPU import/runtime and actual 504 support remain untested. CPU arithmetic evidence cannot close G0 or prove a scientific gain.
 
 Target installation: requirements export and source-environment `pip check` are complete; installing those dependencies on a fresh Ubuntu 4090 machine remains untested. See TRANSFER_4090.md for the prepared commands and missing inputs.
+
+Asset transfer update: required validation images/GT on 192.168.0.18 exactly match this machine (26,626 files). Dataset retransfer is unnecessary. Target weight is absent; verified weight and small metadata package are prepared locally. Target was accessed read-only, so actual upload and path aliases have not been applied. Use research/p01/asset-transfer/REMOTE_TRANSFER.md; source-scene evidence is still missing.

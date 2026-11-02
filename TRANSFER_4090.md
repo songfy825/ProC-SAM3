@@ -1,5 +1,7 @@
 # Ubuntu x86_64 / RTX 4090 transfer
 
+**当前执行入口（2026-11-02）：[4090 最终 Goal](research/p01/execution/GOAL_4090.md)。GPU 已获授权，先单独完成 G0 验证，全部通过后再运行 calibration/pilot，保留 P02 缓存。本轮禁止 confirmation。** 下文的待授权描述记录此前阶段；执行范围和阶段顺序以 Goal 为准，confirmation 命令仅为后续参考。
+
 代码提供分阶段启动入口，**不是“只等 GPU 空闲即可保证实验成功”**。真实 GPU G0、1008/504 编码行为、显存容量、pilot 和 confirmation 均未实测；LoveDA 原始场景映射仍缺少可核验来源。补齐依赖、原始资产、场景证据和路径后，可以用一条命令从 G0 开始，失败即停止。没有后台排队或 GPU 空闲监控。
 
 ## 1. 代码和依赖

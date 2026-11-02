@@ -1,5 +1,7 @@
 # Deferred GPU runbook — NOT EXECUTED
 
+**当前执行入口（2026-11-02）：[4090 最终 Goal](research/p01/execution/GOAL_4090.md)。用户已授权目标 4090 的 G0 及通过后的 calibration/pilot；G0 必须单独执行并逐项验证。本轮禁止 confirmation，并保留 P02 缓存。** 以下未授权描述是此前阶段的记录；本轮范围以 Goal 为准。本次仅发布任务书，没有新增 GPU 实验结果。
+
 Every GPU command below is **unverified on a real model**. This round did not load SAM3 weights into a model, run GPU inference/tests, reserve VRAM, queue work, or wait for GPU availability. Execute only after a new user instruction. GPU G0, actual 504 feature behavior, online resources, pilot and confirmation remain PENDING. CPU tests certify software contracts, not model accuracy.
 
 **Ubuntu / 4090 transfer:** start with [TRANSFER_4090.md](TRANSFER_4090.md). It supplies the portable requirements and stage launcher. The expanded commands below document each stage and its acceptance criteria; their original-host paths are examples, not target-machine defaults.

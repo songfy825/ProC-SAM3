@@ -1,5 +1,7 @@
 # P01 engineering package
 
+**4090 execution handoff:** read [the approved final Goal](execution/GOAL_4090.md). GPU use is authorized for G0, then calibration/pilot only after G0 passes. Confirmation is excluded; retain raw caches and production evidence for P02. The Goal supersedes historical CPU-only scope for this target-machine run; real-model validation is still required.
+
 This is an opt-in standalone path. Original ProC/SAM3 source is unchanged. New inference defaults off. No training, prompt generation, model download or API inference.
 
 - `METHOD.md`: frozen scientific/engineering contract and ECD-ProC formulas.

@@ -2,6 +2,14 @@
 
 Scope: 2026-10-30 user revision. CPU-only engineering; no GPU inference/tests, allocation, queues or waiting. GPU G0, pilot, confirmation and scientific conclusions PENDING.
 
+## 2026-11-02 — iSAID filename repair and 4090 handoff
+
+- Corrected the adapter's `cfg_isaid.py` lookup to the tracked `cfg_iSAID.py`; no original model/configuration or scientific-policy change.
+- A real case-sensitive `/tmp` relocation regression reproduced one iSAID failure while LoveDA passed; the identical two-test file passed after the fix. Complete P01 acceptance passed **72 CPU tests, zero skips**, with all acceptance commands exit 0. Independent review found no blocking issue.
+- Evidence and commands: [filename repair receipt](research/p01/execution/isaid-config-case/README.md). Existing tests, frozen contracts and original model files remain unchanged.
+- User confirmed the 4090 checkpoint at `/home/fengyi/sam3.pt`; the settings template and handoff now use it. Target hash verification remains required. This repair did not run GPU inference or remotely verify the weight.
+- The target 4090 is authorized to run the [final Goal](research/p01/execution/GOAL_4090.md): standalone G0 first, then calibration/pilot only after PASS; no confirmation. The filename fix changes code identity, so old-code GPU runs cannot be resumed under it. Publication is handled after verification.
+
 ## Resume
 Read this file, BLOCKED.md, research/p01/run_manifest.json and evidence hashes before resuming. Do not repeat verified unchanged phases. All code belongs to this independent clone, branch codex/p01-scale-calibration, base 234c87e58fb08f02ba1cf163b2a73f5330d462e9. Source repo HEAD 742ce170e1686b51aab06f2afd22c93812cb06cb is clean and read-only. No source inference result counts as G0.
 

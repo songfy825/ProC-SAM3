@@ -1,6 +1,6 @@
 {
   "runtime": "/data/p01-runs",
-  "checkpoint": "/data/weights/sam3.pt",
+  "checkpoint": "/home/fengyi/sam3.pt",
   "manifest": "/data/p01-inputs/splits-v1.jsonl",
   "run_prefix": "4090-v1",
   "pilot_labels": "/data/p01-inputs/pilot-labels.jsonl",

@@ -1,4 +1,8 @@
-# 192.168.0.18：仅迁移权重，复用现有数据
+# 192.168.0.18：当前资产状态与历史迁移记录
+
+**当前状态（2026-11-02，用户确认）：4090 目标机的权重已位于 `/home/fengyi/sam3.pt`。** 本次文档更新未连接目标机复核；后续必须由目标机 preflight 核验其大小和 SHA256。当前设置文件直接使用 `checkpoint=/home/fengyi/sam3.pt`；不依据下方旧“目标缺失”记录重复上传权重，不创建 `/data/weights/sam3.pt` 别名。若核验失败，保留证据并停止，不覆盖现有文件。
+
+以下保留 2026-10-30 的检查结果和当时拟定的迁移方案，**旧上传和 `setup_links.py --apply` 命令不是当前执行步骤**。当前执行范围以 [4090 Goal](../execution/GOAL_4090.md) 为准。
 
 2026-10-30，只读逐文件 SHA256 比对结果：本机与 `fengyi@192.168.0.18` 的 LoveDA/iSAID **验证图像和标签完全一致**，共 26,626 文件、30,509,113,565 字节；缺失、额外文件、大小不符、hash 不符均为 0。两边实际清单摘要一致：`a8eb43b4735e2d1094eb422efaf9e6f327ccb0c80b4fbc96e9fef49de4470011`。
 
@@ -9,9 +13,9 @@
 
 比对仅覆盖 `img_dir/val` 和 `ann_dir/val`，不宣称其他数据集或训练集一致。`LoveDA` / `loveDA` 大小写差异可用软链接解决，**不改图像和标签、不改现有实验代码和配置**。
 
-目标 `/home/fengyi/sam3.pt` 不存在。唯一需要迁移的大文件是本机 `/home/fengyi/sam3.pt`：3,450,062,241 字节（约 3.21 GiB），SHA256 `9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e`。
+2026-10-30 检查时，目标 `/home/fengyi/sam3.pt` 不存在，因此当时计划只迁移本机 `/home/fengyi/sam3.pt`：3,450,062,241 字节（约 3.21 GiB），SHA256 `9999e2341ceef5e136daa386eecb55cb414446a00ac2b55eb2dfd2f7c3cf8c9e`。目标缺失结论已被上述 2026-11-02 用户确认更新，预期大小和 hash 不变。
 
-本次只读远端；未上传、创建软链接、改动文件或运行 GPU。以下操作供之后实际迁移时执行。完整数据归档已取消，其不完整文件已清理，只保留取消记录和日志。不要传输旧的 `assets-v1` 目录。
+2026-10-30 那轮只读远端；未上传、创建软链接、改动文件或运行 GPU。以下操作保留为当时的迁移方案。完整数据归档已取消，其不完整文件已清理，只保留取消记录和日志。不要传输旧的 `assets-v1` 目录。
 
 ## 交付内容
 
@@ -24,7 +28,7 @@
 
 小元数据包是为了保持现有清单和路径兼容；数据本体无需传输。
 
-## 迁移（本次未执行远端写入）
+## 历史迁移方案（当前不执行权重上传）
 
 在本机交付目录中：
 
@@ -33,7 +37,7 @@ sha256sum -c SHA256SUMS
 scp sam3.pt p01-metadata-v2.tar.gz SHA256SUMS fengyi@192.168.0.18:/home/fengyi/
 ```
 
-目标 `/home/fengyi/sam3.pt` 本次核验时不存在；执行前若已存在，应先检查 hash，不能覆盖未知文件。SSH 密码不写入脚本、日志或命令行参数。
+以上是针对 2026-10-30 目标缺失状态的旧命令；当前不执行其中的权重上传。目标已有文件先检查 hash，不能覆盖未知文件。SSH 密码不写入脚本、日志或命令行参数。
 
 在目标机 `/home/fengyi`：
 
@@ -45,7 +49,7 @@ tar -xzf p01-metadata-v2.tar.gz -C /home/fengyi/p01-transfer --no-same-owner
 
 代码从已推送分支克隆，Conda 依赖仍使用仓库 requirements.txt。目标系统 Python 为 3.8；路径辅助脚本使用已激活的 **Conda Python 3.12**。不要用系统 Python 执行路径辅助脚本。
 
-## 维持原路径与配置
+## 历史路径别名方案（当前不执行 apply）
 
 激活 p01-sam3 环境后，在代码克隆目录预览：
 
@@ -63,7 +67,7 @@ sudo "$(command -v python)" /home/fengyi/p01-transfer/p01-assets/setup_links.py 
   --loveda-name loveDA --checkpoint /home/fengyi/sam3.pt --apply
 ```
 
-这会使旧 `/home/fengyi/E/data/SegEarth/LoveDA` 和 `/data/datasets/LoveDA` 都指向目标已有的 `loveDA`；iSAID 同理。`/data/weights/sam3.pt` 指向 `/home/fengyi/sam3.pt`。`/data/p01-inputs`、`/data/p01-runs` 指向元数据包的 inputs、runtime。原代码路径链接到实际克隆目录。配置文件无需编辑。
+旧方案会使 `/home/fengyi/E/data/SegEarth/LoveDA` 和 `/data/datasets/LoveDA` 都指向目标已有的 `loveDA`；iSAID 同理。它还会创建 `/data/weights/sam3.pt` 指向 `/home/fengyi/sam3.pt` 的别名，以及输入、运行根和代码路径别名。当前不要执行此整套 `--apply`；设置文件直接填写本机实际路径和 `checkpoint=/home/fengyi/sam3.pt`。如需处理数据目录大小写，只针对数据路径核查和适配，不附带创建权重别名。
 
 ## 尚未补齐的研究输入
 

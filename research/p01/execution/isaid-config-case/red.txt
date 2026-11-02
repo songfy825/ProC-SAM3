@@ -1,0 +1,32 @@
+test_isaid_loads_released_assets_on_case_sensitive_filesystem (test_config_paths.ConfigPaths.test_isaid_loads_released_assets_on_case_sensitive_filesystem) ... FAIL
+test_loveda_loads_released_assets_after_relocation (test_config_paths.ConfigPaths.test_loveda_loads_released_assets_after_relocation) ... /home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/lib/python3.12/site-packages/torch/amp/autocast_mode.py:266: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+ok
+
+======================================================================
+FAIL: test_isaid_loads_released_assets_on_case_sensitive_filesystem (test_config_paths.ConfigPaths.test_isaid_loads_released_assets_on_case_sensitive_filesystem)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3/tests/research/test_config_paths.py", line 43, in check_relocated_dataset
+    options = baseline.model_options(dataset)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3/proc_research/baseline.py", line 27, in model_options
+    cfg=runpy.run_path(str(ROOT/'configs'/filename))['model'].copy()
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen runpy>", line 286, in run_path
+  File "<frozen runpy>", line 254, in _get_code_from_file
+FileNotFoundError: [Errno 2] No such file or directory: '/tmp/p01-config-case-piujts1z/configs/cfg_isaid.py'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3/tests/research/test_config_paths.py", line 62, in test_isaid_loads_released_assets_on_case_sensitive_filesystem
+    self.check_relocated_dataset(
+  File "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3/tests/research/test_config_paths.py", line 46, in check_relocated_dataset
+    self.fail(f'{dataset} must load the tracked asset filenames: {error}')
+AssertionError: iSAID must load the tracked asset filenames: [Errno 2] No such file or directory: '/tmp/p01-config-case-piujts1z/configs/cfg_isaid.py'
+
+----------------------------------------------------------------------
+Ran 2 tests in 5.981s
+
+FAILED (failures=1)

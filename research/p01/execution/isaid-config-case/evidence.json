@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "scope": "CPU-only config filename portability repair; real GPU G0 remains pending",
+  "base_commit": "23e8896a447fc120f52a68ef678faf4c154cda29",
+  "regressions": {
+    "red": {
+      "command": [
+        "bash",
+        "scripts/p01/python.sh",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/research",
+        "-p",
+        "test_config_paths.py",
+        "-v"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "environment": {
+        "P01_PYTHON": "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "P01_RUNTIME": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/runtime",
+        "P01_ENABLE_GPU": "0",
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "started_unix": 1793602066.4094083,
+      "elapsed_seconds": 10.02812123298645,
+      "exit_code": 1,
+      "log_sha256": "2fe25af1ab61e8c07e90aed57e659a2afda7171e31865c880ac9d1939fa714cd",
+      "test_sha256": "6c8e3dfb0b4bf38007818bc968ea216dc229787eaf45caa85b16e8514e90bded",
+      "baseline_sha256": "328ef756e636b1064a01cc7c450a0ae5c2ea922a6a3bcd9e7015f445db25e758"
+    },
+    "green": {
+      "command": [
+        "bash",
+        "scripts/p01/python.sh",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/research",
+        "-p",
+        "test_config_paths.py",
+        "-v"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "environment": {
+        "P01_PYTHON": "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "P01_RUNTIME": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/runtime",
+        "P01_ENABLE_GPU": "0",
+        "CUDA_VISIBLE_DEVICES": ""
+      },
+      "started_unix": 1793602127.5116436,
+      "elapsed_seconds": 10.022687673568726,
+      "exit_code": 0,
+      "log_sha256": "376ce944551e81088be11d109c64995a99f8cc10fe8dc32112e23082e0916f49",
+      "test_sha256": "6c8e3dfb0b4bf38007818bc968ea216dc229787eaf45caa85b16e8514e90bded",
+      "baseline_sha256": "70eff6062fc1c61ead2f06862eb8cfc013c7fbe8236da2f374aaba31dd743599"
+    }
+  },
+  "full_acceptance": {
+    "tests": 72,
+    "skips": 0,
+    "status": "PASS",
+    "code_sha256": "2c7c13be496229d4c2b4ced3e58bcc811c5e9e18c25b2bd5e1ca8be1db9a5883",
+    "verification_sha256": "a99e0387570eff11528511540b2c8892b16d1653c67834db17ea5b4a53c31a37",
+    "source_runtime": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance"
+  },
+  "target_checkpoint": {
+    "path": "/home/fengyi/sam3.pt",
+    "source": "user confirmation 2026-11-02",
+    "target_integrity_checked_in_this_task": false
+  },
+  "review": "Independent agent reviewed real case-sensitive regression, one-line fix and handoff; no blocking findings."
+}

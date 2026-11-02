@@ -1,0 +1,9 @@
+test_isaid_loads_released_assets_on_case_sensitive_filesystem (test_config_paths.ConfigPaths.test_isaid_loads_released_assets_on_case_sensitive_filesystem) ... /home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/lib/python3.12/site-packages/torch/amp/autocast_mode.py:266: UserWarning: User provided device_type of 'cuda', but CUDA is not available. Disabling
+  warnings.warn(
+ok
+test_loveda_loads_released_assets_after_relocation (test_config_paths.ConfigPaths.test_loveda_loads_released_assets_after_relocation) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 5.968s
+
+OK

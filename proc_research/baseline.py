@@ -23,7 +23,7 @@ def require_gpu_authorization(allow_gpu):
 
 
 def model_options(dataset,pool=None):
-    filename={'LoveDA':'cfg_loveda.py','iSAID':'cfg_isaid.py'}[dataset]
+    filename={'LoveDA':'cfg_loveda.py','iSAID':'cfg_iSAID.py'}[dataset]
     cfg=runpy.run_path(str(ROOT/'configs'/filename))['model'].copy()
     cfg.pop('type')
     pool=Path(pool) if pool else ROOT/'prompt_pools'/f'cfg_{"loveda" if dataset=="LoveDA" else "iSAID"}_expanded_prompt_pool_hybrid_strict.pkl'

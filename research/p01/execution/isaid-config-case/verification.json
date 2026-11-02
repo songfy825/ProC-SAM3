@@ -1,0 +1,192 @@
+{
+  "scope": "CPU synthetic contracts only; GPU/real research PENDING",
+  "time_utc": "2026-11-02T06:50:49.128134+00:00",
+  "code_sha256": "2c7c13be496229d4c2b4ced3e58bcc811c5e9e18c25b2bd5e1ca8be1db9a5883",
+  "method_sha256": "3d1a8ef6a4b98917c8dfc9fe778179093958e773544457ab12514659396a44b0",
+  "config_sha256": "73f79700a36f20d6741a0550e2aeb637973ba9b50b71ac857c8f15a41743ce23",
+  "tests": 72,
+  "commands": [
+    {
+      "name": "contracts",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/research",
+        "-v"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 63.11875936202705,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/contracts.log",
+      "log_sha256": "103d666c20ee0319697f432eb5a50a5e034cb45dc5c4d03a2241757310c60ba5"
+    },
+    {
+      "name": "negative_audits",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.audit",
+        "negative",
+        "--output",
+        "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/negative.json"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 24.367772360914387,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/negative_audits.log",
+      "log_sha256": "fc8809194cc54c426df21792f774c3d19fa26978d59f4d562e7da8008848122d"
+    },
+    {
+      "name": "frozen_contract",
+      "command": [
+        "sha256sum",
+        "-c",
+        "research/p01/evidence/contract-freeze.sha256"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 0.002820280962623656,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/frozen_contract.log",
+      "log_sha256": "5dd3e5c1ba8ca41ae805367e8b8cfb06d096a41099086c13c01f1507566c2581"
+    },
+    {
+      "name": "whitespace",
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 0.027592376922257245,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/whitespace.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "original_model_unchanged",
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "234c87e58fb08f02ba1cf163b2a73f5330d462e9",
+        "--",
+        "sam3_segmentor_cached.py",
+        "core",
+        "sam3",
+        "configs",
+        "prompt_pools"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 0.01036253001075238,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/original_model_unchanged.log",
+      "log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "proc_research_calibration_run_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.calibration.run",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.4340620290022343,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/proc_research_calibration_run_help.log",
+      "log_sha256": "33b0ce7384339f984e0a2f93a3f1ebd06e524842d21e46af5c42f0e9138d7fc9"
+    },
+    {
+      "name": "proc_research_evaluate_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.evaluate",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.3803142820252106,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/proc_research_evaluate_help.log",
+      "log_sha256": "ed40ca1d5891e4d1dba9628eb161587d85ce9460e0fb9970a9d1c02e405d7a8b"
+    },
+    {
+      "name": "proc_research_report_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.report",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.5741034890525043,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/proc_research_report_help.log",
+      "log_sha256": "bdbafdaf156b1affe7499f3edc1d923ad5b3b84737e3b6dd19774531f83e2195"
+    },
+    {
+      "name": "proc_research_prepare_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.prepare",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.471205432084389,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/proc_research_prepare_help.log",
+      "log_sha256": "ff69ae99569fc6dc8f2369a36de53ccae90fa5845223281df7daa6ccde6d6774"
+    },
+    {
+      "name": "proc_research_audit_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.audit",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.370211901026778,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/proc_research_audit_help.log",
+      "log_sha256": "5ad57e5164baa58dc52c5110d5b7f46edf41bddd934db530b48f2a7079d7c79f"
+    },
+    {
+      "name": "proc_research_launch_help",
+      "command": [
+        "/lib64/ld-linux-x86-64.so.2",
+        "/home/fengyi/CodeHome/ProC-SAM3-repro/conda-env/bin/python",
+        "-m",
+        "proc_research.launch",
+        "--help"
+      ],
+      "cwd": "/home/fengyi/E/CodeHome/Proc/src/ProC-SAM3",
+      "exit_code": 0,
+      "seconds": 3.526695010950789,
+      "log": "/home/fengyi/E/CodeHome/Proc/runtime/p01/audit/isaid-config-case-v1/acceptance/proc_research_launch_help.log",
+      "log_sha256": "a7daee8cace0fe3ba64c51e4709180a1a4d43bed4a81ad524c9adcc458fd77bd"
+    }
+  ],
+  "test_source_sha256": {
+    "tests/research/test_config_paths.py": "6c8e3dfb0b4bf38007818bc968ea216dc229787eaf45caa85b16e8514e90bded",
+    "tests/research/test_contracts.py": "f841b17fc501c16e509bbe37b0d2ea3fdf9c47bbbba8132962094248b9eab665",
+    "tests/research/test_p2_regressions.py": "33a36d9a6365d83114d81560ab6168cd57e1b200554af420749b45dabb5884f4",
+    "tests/research/test_pipeline.py": "b8860aba50ca8645628fcb43b91f36937054f42ed4798d098521e4d0d50bc2af",
+    "tests/research/test_review_fixes.py": "ceb35e40cfa69b1d2f208a93ce1b393c92f21cc9f31f53b39fa72912e5577ea6",
+    "tests/research/test_runtime.py": "4252c12864236096a1249247cdc04cbbe81903541341f07e66d295c78cf478f9",
+    "tests/research/test_stage_gates.py": "cbaab86863ccf4f45f2f3eb77834e0660fbaed9d9f7771f7988a6793da4fb3f1",
+    "tests/research/test_transfer.py": "a69bed40fe1fa663fc7f2b9a1d0956144be405246302cc8944f9790de7362b3a"
+  },
+  "status": "PASS"
+}
